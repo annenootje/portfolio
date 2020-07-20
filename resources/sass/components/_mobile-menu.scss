@@ -1,0 +1,44 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 99;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: $transition;
+
+  background-color: $black;
+
+  .container {
+    @include container;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      
+      width: 100%;
+
+      a {
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+
+        & + a {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  &.active {
+    left: 0;
+  }
+}

@@ -1,0 +1,14 @@
+.slider {
+
+  .inner {
+
+    .slide {
+      display: none;
+
+      &.active
+      {
+        display: block;
+      }
+    }
+  }
+}

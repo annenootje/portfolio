@@ -1,0 +1,65 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+section.line {
+  width: 100%;
+
+  .container {
+    @include grid;
+    @include container;
+
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  + section.line:not(.half) {
+    @extend %standard-top-space;
+  }
+
+  &.small {
+    .container {
+      max-width: $max-width-md;
+    }
+  }
+
+  &.extra-small {
+    .container {
+      max-width: $max-width-xs;
+    }
+  }
+
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &.half {
+    height: 100vh;
+    width: 50vw;
+
+    .container {
+
+    }
+  }
+
+  &.grey {
+    background-color: $grey;
+
+    .container {
+
+    }
+  }
+}

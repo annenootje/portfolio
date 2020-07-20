@@ -1,0 +1,90 @@
+.service {
+    position: relative;
+    padding: 50px;
+    width: 310px;
+
+    background-color: $grey;
+
+    animation: loadService 850ms ease-out;
+
+    &:nth-of-type(2) {
+        animation: loadService2 850ms ease-out;
+    }
+
+    &:nth-of-type(3) {
+        animation: loadService3 850ms ease-out;
+    }
+
+    @media (max-width: 1150px) {
+        width: calc(33.3% - 10px);
+        padding: 45px;
+    }
+
+    &::after {
+        content: 'Project met dit pakket';
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0;
+        transition: $transition-fast;
+
+        background-color: $blue;
+        cursor: pointer;
+
+        color: white;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    p {
+        position: relative;
+        list-style: none;
+        padding-left: 20px;
+
+        line-height: 1.8;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 9px;
+            left: 0px;
+
+            width: 10px;
+            height: 7px;
+
+            background-image: url('/img/check-blue.svg');
+            @extend %containBackground;
+            background-position: left center;
+        }        
+    }
+
+    h6 {
+        font-size: 14px;
+        & + p {
+            margin-top: 7px;
+        }
+    }
+
+    & + .service {
+        margin-left: 20px;
+
+        @media (max-width: 1150px) {
+            margin-left: 15px;
+        }
+    }
+}

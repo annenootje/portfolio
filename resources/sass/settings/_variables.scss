@@ -1,0 +1,52 @@
+$transition: 450ms ease-in-out;
+$transition-fast: 250ms ease-in-out;
+
+//colors
+$black: #0A0A0A;
+$blue: #0C04F3;
+$red: #F45866;
+$grey: #F7F7F7;
+
+//max-width
+$max-width: 10000px;
+$max-width-md: 800px;
+$max-width-xs: 550px;
+
+//media queries
+$media-xs: 375px;
+$media-sm: 576px;
+$media-md: 768px;
+$media-lg: 922px;
+$media-xl: 1200px;
+
+//grid
+$grid-model: 12;
+$grid-gutter: 4.5%;
+$grid-model-xl: 12;
+$grid-gutter-xl: 4.5%;
+$grid-model-lg: 12;
+$grid-gutter-lg: 4.5%;
+$grid-model-md: 8;
+$grid-gutter-md: 4.5%;
+$grid-model-sm: 4;
+$grid-gutter-sm: 4.5%;
+$grid-model-xs: 4;
+$grid-gutter-xs: 4.5%;
+
+//space
+$standard-space: 130px;
+$standard-space-lg: 100px;
+$standard-space-md: 80px;
+$standard-space-sm: 80px;
+$standard-space-xs: 40px;
+$side-space: 80px;
+
+//hamburger
+$hamburger-width: 18px;
+$hamburger-height: 13px;
+$hamburger-span-height: 2px;
+$hamburger-span-background: black;
+
+//button
+$button-space-y: 13px;
+$button-space-x: 30px;

@@ -1,0 +1,63 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 60px;
+    @include container;
+
+    .logo {
+      svg {
+        path {
+          transition: $transition;
+        }
+      }
+    }
+
+    .site-title {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      right: 0;
+      z-index: 0;
+
+      margin: auto;
+      pointer-events: none;
+
+      text-align: center;
+    }
+
+    svg {
+      width: 180px;
+      height: auto;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .button {
+        margin-right: 25px;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.active {
+    .logo {
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+}

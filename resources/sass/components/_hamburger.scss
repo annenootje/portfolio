@@ -1,0 +1,56 @@
+header {
+  .hamburger {
+    position: relative;
+  
+    width: $hamburger-width;
+    height: $hamburger-height;
+  
+    cursor: pointer;
+  
+    span {
+      position: absolute;
+  
+      display: inline-block;
+  
+      transition: 250ms ease-in-out;
+  
+      width: 100%;
+      height: $hamburger-span-height;
+      margin: auto;
+      border-radius: 100px;
+  
+      background-color: $hamburger-span-background;
+  
+      &:nth-of-type(1) {
+        top: 0;
+      }
+  
+      &:nth-of-type(2) {
+        bottom: 0;
+      }
+    }
+  
+    &.active {
+      span {
+  
+        &:nth-of-type(1) {
+          top: calc(50% - calc(#{$hamburger-span-height} / 2));
+          transform: rotate(-45deg);
+        }
+  
+        &:nth-of-type(2) {
+          bottom: calc(50% - calc(#{$hamburger-span-height} / 2));
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &.active {
+    .hamburger {
+      span {
+        background-color: white;
+      }
+    }
+  }
+}
