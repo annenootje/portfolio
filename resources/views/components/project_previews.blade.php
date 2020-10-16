@@ -1,4 +1,4 @@
-<div class="container slide">
+{{-- <div class="container slide">
     <div class="blue-line">
         <p>
             <b class="light subtitle">Webapplicatie</b>
@@ -35,17 +35,21 @@
         </h6>
         <div class="play"></div>
     </div>
-</div>
+</div> --}}
 
-<div class="container slide">
-    <div class="blue-line">
-        <p>
-            <b class="light subtitle">Website</b>
-        </p>
-        <img src="/img/mobiel-vanderree.png" alt="">
-        <h6 class="white title">Restaurant<br>
-            Van der Ree
-        </h6>
-        <div class="play"></div>
-    </div>
-</div>
+@foreach($projects as $project)
+
+    <a class="container slide" href="/project/{{$project->id}}">
+        <div class="blue-line">
+            <p>
+                <b class="light subtitle">{{$project->preview}}</b>
+            </p>
+            <img src="{{$project->image}}" alt="">
+            <h6 class="white title">
+                {{$project->title}}
+            </h6>
+            <div class="play"></div>
+        </div>
+    </a>
+
+@endforeach

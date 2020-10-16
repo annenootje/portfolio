@@ -20,6 +20,23 @@
         padding: 45px;
     }
 
+    @media (max-width: 767px) {
+        width: calc(50% - 7.5px);
+        
+        &:nth-of-type(3) {
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        width: 100%;
+
+        & + .service {
+            margin-top: 15px;
+            margin-left: 0!important;
+        }
+    }
+
     &::after {
         content: 'Project met dit pakket';
 

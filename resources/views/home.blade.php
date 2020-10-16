@@ -7,7 +7,7 @@
         <span></span>
     </div>
 
-    <section class="line center">
+    <section class="line center full-height">
         <div class="home-slider">
                 
             <div class="container business-card-container slide  white-line">
@@ -19,7 +19,7 @@
                     <div class="business-card-side business-card-front">
                         <div class="top">
                             {{-- <img src="/img/logo.png" alt=""> --}}
-                            <div>
+                            <div class="text-right">
                                 <h2>Anne Noteboom</h2>
                                 <a href="mailto:info@annenoteboom.nl">info@annenoteboom.nl</a>
                             </div>

@@ -2,9 +2,16 @@
     position: relative;
     z-index: 10;
 
+    // @media (max-width: 680px) {
+    //     margin-top: 120px;
+    // }
+
     .slide {
+        visibility: hidden;
+        opacity: 0;
+
         pointer-events: none;
-        transition: 250ms ease-in-out;
+        transition: 450ms ease-in-out;
 
         &.white-line {
             &::before {
@@ -46,6 +53,13 @@
 
             text-align: center;
 
+            @media (max-width: 680px) {
+                top: 100px;
+                padding: 30px 0;
+                width: 160px;
+                border-radius: 10px 10px 0 0;
+            }
+
             img {
                 position: fixed;
                 top: 0;
@@ -64,11 +78,17 @@
 
                 -webkit-filter: drop-shadow(15px 15px 20px rgba(0,0,0,0.15));
                 filter: drop-shadow(15px 15px 20px rgba(0,0,0,0.15));
+
+                @media (max-width: 680px) {
+                    height: 50vh;
+                    top: 70px;
+                }
             }
 
             .title,
             .subtitle
             {
+                max-width: 100px;
                 transition: 500ms ease-in-out;
                 opacity: 0;
             }
@@ -76,6 +96,11 @@
             .title {
                 position: fixed;
                 bottom: 60px;
+
+                @media (max-width: 680px) {
+                    bottom: 35px;
+                    font-size: 16px;
+                }
             }
 
             .play {
@@ -84,7 +109,9 @@
                 left: 180px;
                 right: 0;
 
-                box-shadow: -2px 2px 10px rgba(0,0,0,0.05);
+                display: none;
+
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.09);
                 margin: auto;
                 width: 50px;
                 height: 50px;
@@ -98,6 +125,15 @@
                 &:hover {
                     box-shadow: 0px 0px 12px rgba(0,0,0,0.08);
                 }
+
+                @media (max-width: 680px) {
+                    left: 160px;
+                    bottom: 20vh;
+                    width: 45px;
+                    height: 45px;
+
+                    background-size: 9px;
+                }
             }
         }
 
@@ -109,6 +145,8 @@
         &.active {
             display: flex!important;
             pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
 
             .blue-line {
                 animation: loadLine 1200ms ease-out;
@@ -138,13 +176,39 @@
         &:nth-of-type(1) {
             z-index: -1;
             background-color: $blue;
+            transition: 250ms ease-in-out;
+
+            &:hover {
+                background-color: darken($blue, 6);
+            }
         }
     }
 
     .slide:not(.business-card-container) {
-        & + .slide {
+        & + .slide.active {
             .blue-line {
-                background-color: transparent;
+                animation: none;
+                // background-color: transparent;
+
+                img {
+                    transform: translate(0px);
+                    animation: loadLineImg 1000ms ease-out;
+                    opacity: 1;
+                }
+
+                .title,
+                .subtitle
+                {
+                    // animation: loadLineTitle 1800ms ease-out;
+                    opacity: 1;
+
+                }
+            }
+        }
+
+        &.active {
+            .play {
+                display: block;
             }
         }
     }

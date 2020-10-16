@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="line half grey center">      
-        <div class="container business-card-container slide">
+        <div class="container business-card-container">
             <div class='business-card' data-tilt data-tilt-scale="1.01" data-tilt-max="20">
                 <div class="business-card-side business-card-right"></div>
                 <div class="business-card-side business-card-left"></div>
@@ -52,7 +52,7 @@
                             <div class="checkbox">
                                 <input type="checkbox" id="checkbox" v-model='privacy' v-bind:class="{ error: privacyError }">
                                 <label for="checkbox">
-                                    Ik ga akkoord met de&nbsp;<a href="privacy">privacyverklaring</a>
+                                    Ik ga akkoord met de&nbsp;<a href="privacy" target="_blank">privacyverklaring</a>
                                 </label>
                                 <div class="checked">
                                     <img src="/img/check.svg" alt="">

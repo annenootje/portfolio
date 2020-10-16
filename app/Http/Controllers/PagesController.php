@@ -7,18 +7,20 @@ use App\Contactdetail;
 use App\Message;
 use App\Social;
 use App\Aboutdetail;
+use App\Blog;
 
 class PagesController extends Controller
 {
     public function index() {
         $title = '';
         $contact = Contactdetail::all();
+        $projects = Blog::all();
 
-        return view('home', compact('contact', 'title'));
+        return view('home', compact('contact', 'title', 'projects'));
     }
 
     public function about() {
-        $about = Aboutdetail::all();
+        $about = Aboutdetail::all()[0];
 
         return view('about', compact('about'));
     }
@@ -29,7 +31,16 @@ class PagesController extends Controller
     }
 
     public function projecten() {
-        return view('projecten');
+        $projects = Blog::all();
+        return view('projecten', compact('projects'));
+    }
+
+    public function project($id) {
+
+        $project = Blog::find($id);
+        $title = $project->title;
+
+        return view('project', compact('project', 'title'));
     }
 
     public function contact() {

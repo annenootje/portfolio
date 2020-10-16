@@ -11,6 +11,18 @@
     margin: auto;
     height: 100px;
 
+    @media (max-width: 992px) {
+        left: 50px;
+    }
+
+    @media (max-width: 767px) {
+        left: 30px;
+    }
+
+    @media (max-width: 680px) {
+        display: none;
+    }
+
     span {
         position: absolute;
         left: 0;

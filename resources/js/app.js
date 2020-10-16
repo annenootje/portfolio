@@ -22,6 +22,23 @@ hamburger.addEventListener('click', function () {
     header.classList.toggle('active');
 });
 
+let greeting = document.querySelector('.greeting');
+
+var date = new Date();
+var current_hour = date.getHours();
+
+console.log(current_hour);
+
+if ( current_hour < 12 && current_hour > 4 ) {
+    greeting.innerHTML = 'Goedemorgen';
+} else if ( current_hour < 18 && current_hour >= 12 ) {
+    greeting.innerHTML = 'Goedemiddag';
+} else if ( current_hour >= 18 && current_hour < 23 ) {
+    greeting.innerHTML = 'Goedenavond';
+} else {
+    greeting.innerHTML = 'Goedenacht';
+}
+
 // window.Vue = require('vue');
 
 // const app = new Vue({

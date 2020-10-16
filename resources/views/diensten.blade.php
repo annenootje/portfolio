@@ -4,7 +4,7 @@
 
     <section class="line center">
         <div class="container">
-            <a class="service" href="projecten/2">
+            <a class="service" href="/project/1">
                 <h4>Website</h4>
                 <p>Uniek design</p>
                 <p>Rekening met SEO</p>
@@ -15,7 +15,7 @@
                 <p>Hosting</p>
                 <p>SEA (betaalde marketing)</p>
             </a>
-            <a class="service" href="projecten/2">
+            <a class="service" href="/project/7">
                 <h4>Webshop</h4>
                 <p>Uniek design</p>
                 <p>Rekening met SEO</p>
@@ -27,7 +27,7 @@
                 <p>SEA (betaalde marketing)</p>
                 <p>iDeal implementatie</p>
             </a>
-            <a class="service" href="projecten/2">
+            <a class="service" href="/project/2">
                 <h4>Webapplicatie</h4>
                 <p>Uniek design</p>
                 <p>Rekening met SEO</p>

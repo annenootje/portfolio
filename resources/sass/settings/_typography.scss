@@ -40,6 +40,10 @@ h3 {
 
 h4 {
   @extend %heading-4;
+
+  & + p {
+    margin-top: 40px !important;
+  }
 }
 
 h5 {
@@ -52,6 +56,35 @@ h6 {
 
 p {
   @extend %text;
+
+  + h4 {
+    margin-top: 10px;
+  }
+
+  &.blue {
+    color: $blue;
+  }
+
+  &.lightblue {
+    color: $blue;
+    opacity: .4;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.small {
+    font-size: 12px;
+  }
+
+  // a {
+  //   color: $blue !important;
+
+  //   &:hover {
+  //     color: $black !important;
+  //   }
+  // }
 }
 
 a {

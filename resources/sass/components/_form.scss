@@ -47,9 +47,12 @@ form {
         &::placeholder {
             color: rgba(0, 0, 0, 0.2);
         }
-
         &.error {
             border-color: #D13030;
+        }
+
+        &:focus {
+            border-color: $blue;
         }
     }
 
@@ -77,11 +80,11 @@ form {
                 cursor: pointer;
 
                 a {
-                    color: $blue;
+                    color: $black;
                     font-weight: 700;
 
                     &:hover {
-                        color: $black;
+                        color: $blue;
                     }
                 }
 
@@ -102,6 +105,14 @@ form {
                     background-position: center;
                     background-repeat: no-repeat;
                 }
+            }
+
+            &:focus {
+
+                & + label::before {
+                    border-color: $blue;
+                }
+                
             }
 
             &.error {

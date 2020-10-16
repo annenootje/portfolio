@@ -7,6 +7,21 @@
   margin-left: auto;
   padding-right: $side-space;
   padding-left: $side-space;
+
+  @media (max-width: 992px) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (max-width: 580px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 %standard-top-space {

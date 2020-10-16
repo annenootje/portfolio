@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
+Route::get('/over-mij', 'PagesController@about');
 Route::get('/diensten', 'PagesController@diensten');
 Route::get('/projecten', 'PagesController@projecten');
+Route::get('/project/{id}', 'PagesController@project');
 Route::get('/contact', 'PagesController@contact');
 
 Route::post('/send-message', 'PagesController@message');

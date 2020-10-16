@@ -1,11 +1,18 @@
-footer {
+.footer-large {
   position: absolute;
   bottom: 0;
   left: 0;
 
   width: 100%;
+  pointer-events: none;
 
   padding-bottom: 60px;
+
+  @extend %standard-top-space;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 
   .container {
     @include container;
@@ -21,6 +28,7 @@ footer {
     .link {
       position: relative;
       width: 140px;
+      pointer-events: auto;
 
       .part {
         position: absolute;
@@ -103,6 +111,32 @@ footer {
           }
         } 
       }
+    }
+  }
+}
+
+.footer-small {
+  display: none;
+
+  background-color: $black;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include container;
+
+    img {
+      width: 50px;
+      margin-bottom: 40px;
+    }
+
+    * {
+      color: white;
     }
   }
 }

@@ -1,4 +1,4 @@
-<svg version="1.1" x="0px" y="0px" width="159.6px"
+{{-- <svg version="1.1" x="0px" y="0px" width="159.6px"
 	 height="28.4px" viewBox="0 0 159.6 28.4" style="overflow:visible;enable-background:new 0 0 159.6 28.4;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#090A0A;}
@@ -93,6 +93,25 @@
 			c-0.1-0.8-0.7-1.2-1.4-1.2s-1.3,0.4-1.5,1.2H303.3z"/>
 		<path class="st2" d="M308.9,71.2l-0.2,1c-0.3-0.1-0.5-0.2-0.7-0.2c-0.9,0-1.3,1-1.3,2.3V76h-1v-4.9h1v1.1c0.3-0.9,0.7-1.2,1.4-1.2
 			C308.4,71,308.7,71.1,308.9,71.2z"/>
+	</g>
+</g>
+</svg> --}}
+
+<!-- Generator: Adobe Illustrator 24.2.2, SVG Export Plug-In  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34.4px"
+	 height="37.8px" viewBox="0 0 34.4 37.8" style="overflow:visible;enable-background:new 0 0 34.4 37.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#141414;}
+</style>
+<defs>
+</defs>
+<g id="Laag_2_2_">
+	<g id="Laag_1-2_1_">
+		<path class="st0" d="M31.1,0h-6.3c-1.8,0-3.3,1.4-3.3,3.2c0,0,0,0,0,0v6.7l5,7.9c0.5,0.8,0.4,1.8-0.4,2.3s-1.8,0.4-2.3-0.4
+			l-2.3-3.6L12.9,2.4l-0.5-0.8c-0.3-0.4-0.6-0.7-1-1C10.9,0.2,10.2,0,9.5,0H3.3C1.5,0,0,1.4,0,3.2c0,0,0,0,0,0v31.3
+			c0,1.8,1.4,3.3,3.2,3.3c0,0,0,0,0,0h6.3c1.8,0,3.3-1.5,3.3-3.3l0,0v-5.9c0,0,0,0,0-0.1c0-1-0.9-1.8-1.9-1.8H9
+			c-0.9,0-1.7-0.8-1.7-1.7v-6.2c0-0.8,0.6-1.5,1.4-1.6h0.1H9c0.6,0,1.1,0.3,1.4,0.8l2.3,3.7l0,0l8.8,14c0.2,0.3,0.5,0.6,0.8,0.8
+			c0.6,0.8,1.6,1.2,2.6,1.2h6.3c1.8,0,3.3-1.4,3.3-3.2c0,0,0,0,0,0V3.3C34.4,1.5,32.9,0,31.1,0C31.1,0,31.1,0,31.1,0z"/>
 	</g>
 </g>
 </svg>
