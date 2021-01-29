@@ -89,17 +89,12 @@ p {
 
 a {
   text-decoration: none;
-  transition: opacity $transition;
-  cursor: pointer;
+  opacity: .6;
 
-  &.red,
-  b, i, u {
-    color: $red;
-    transition: $transition;
+  transition: opacity $transition-fast;
 
-    &:hover {
-      color: $black;
-    }
+  &:hover {
+    opacity: 1;
   }
 }
 

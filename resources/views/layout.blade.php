@@ -1,195 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="NL">
+    
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Voor al uw websites, websites en webapps">
+        <meta name="keywords" content="Anne Noteboom, website, webdesigner, webapplicatie, webshop"/>
+        <meta name="author" content="Anne Noteboom"/>
+        <meta name="copyright" content="Anne Noteboom"/>
+        <meta name="robots" content="index"/>
         <link rel="stylesheet" href="/css/app.css">
-        <title>Anne Noteboom</title>
+        <title>Anne Noteboom ~ Websitemaker</title>
+        <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+        <link rel="alternate icon" href="/favicon.ico">
+        <link rel="mask-icon" href="/img/favicon.svg" color="black">
     </head>
-    <body>
-        <header>
-            <div class="container">
-                <a href="/" class='logo'>
-                    @include('/icons/logo')
-                    {{-- <img src="/img/logo.svg" alt=""> --}}
-                </a>
-                <p class="site-title"><b>{{$title ?? ''}}</b></p>
-                <div class="right">
-                    <a class="button cirkel" href="mailto:info@annenoteboom.nl">
-                        @include('/icons/mail')
-                    </a>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <main id="app">
+    <body>
+        <main>
             @yield('content')
         </main>
-
-        <footer class="footer-large">
-
-            @if( Request::is('/*') || Request::is('projecten*') )
-
-                <div class="container">
-                    <div class="link">
-                        <a href="/diensten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Diensten</span>
-                        </a>
-                        <a href="/diensten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Diensten</span>
-                        </a>
-                    </div>
-                    <a class="center" href="/projecten">&nbsp;</a>
-                    <div class="link right">
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                    </div>
-                </div>
-
-            @elseif( Request::is('diensten*') )
-
-                <div class="container">
-                    <div class="link">
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                    </div>
-                    <a class="center" href="/contact"><b class="red">Interesse of meer info?</b></a>
-                    <div class="link right">
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                    </div>
-                </div>
-
-            @elseif( Request::is('project/*') )
-
-                <div class="container">
-                    <div class="link">
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                    </div>
-                    <a class="center" href="/contact"><b class="red">Meer informatie?</b></a>
-                    <div class="link right">
-                        <a href="{{$project->link}}" class="part">
-                            <span>Bekijk website</span>
-                            @include('icons/arrow-right')
-                        </a>
-                        <a href="{{$project->link}}" class="part">
-                            <span>Bekijk website</span>
-                            @include('icons/arrow-right')
-                        </a>
-                    </div>
-                </div>
-
-            @elseif( Request::is('over*') )
-
-                <div class="container">
-                    <div class="link">
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                        <a href="/projecten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Projecten</span>
-                        </a>
-                    </div>
-                    <a class="center" href="/contact">&nbsp;</a>
-                    <div class="link right">
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                        <a href="/contact" class="part">
-                            <span>Contact</span>
-                            @include('icons/arrow-right')
-                        </a>
-                    </div>
-                </div>
-
-            @elseif( Request::is('contact*') )
-
-                <div class="container">
-                    <div class="link">
-                        <a onClick="window.history.back()" class="part">
-                            @include('icons/arrow-left')
-                            <span>Terug</span>
-                        </a>
-                        <a href="/diensten" class="part">
-                            @include('icons/arrow-left')
-                            <span>Terug</span>
-                        </a>
-                    </div>
-                    <a class="center">&nbsp;</a>
-                </div>
-
-            @endif
-
-        </footer>
-
-        <footer class="footer-small">
-            <div class="container">
-                <div class="part-12">
-                    <img src="/img/logo-white.svg" alt="">
-                </div>
-                <div class="part-12">
-                    <a class="{{Request::is('/*') ? 'active' : ''}}" href="/">Home</a>
-                <div class="part-12">
-                    <a class="{{Request::is('project*') ? 'active' : ''}}" href="/projecten">Projecten</a>
-                </div>
-                <div class="part-12">
-                    <a class="{{Request::is('diensten*') ? 'active' : ''}}" href="/diensten">Diensten</a>
-                </div>
-                <div class="part-12">
-                    <a class="{{Request::is('over*') ? 'active' : ''}}" href="/over-mij">Over mij</a>
-                </div>
-                <div class="part-12">
-                    <a class="{{Request::is('contact*') ? 'active' : ''}}" href="/contact">Contact</a>
-                </div>
-            </div>
-        </footer>
-
-        <div class='mobile-menu'>
-            <div class="container">
-                <nav>
-                    <a class="{{Request::is('/*') ? 'active' : ''}}" href="/">Home</a>
-                    <a class="{{Request::is('project*') ? 'active' : ''}}" href="/projecten">Projecten</a>
-                    <a class="{{Request::is('diensten*') ? 'active' : ''}}" href="/diensten">Diensten</a>
-                    <a class="{{Request::is('over*') ? 'active' : ''}}" href="/over-mij">Over mij</a>
-                    <a class="{{Request::is('contact*') ? 'active' : ''}}" href="/contact">Contact</a>
-                </nav>
-            </div>
-        </div>
     </body>
 
     <script type="text/javascript" src="/js/app.js"></script>
+
 </html>

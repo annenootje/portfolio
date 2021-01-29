@@ -1,10 +1,10 @@
 $transition: 450ms ease-in-out;
-$transition-fast: 250ms ease-in-out;
+$transition-fast: 300ms ease-in-out;
 
 //colors
-$black: #0A0A0A;
-$blue: #0C04F3;
-$red: #F45866;
+$black: #070707;
+$blue: #18E6F3;
+$red: #FF1542;
 $grey: #F7F7F7;
 
 //max-width
@@ -14,7 +14,7 @@ $max-width-xs: 550px;
 
 //media queries
 $media-xs: 375px;
-$media-sm: 576px;
+$media-sm: 700px;
 $media-md: 768px;
 $media-lg: 922px;
 $media-xl: 1200px;

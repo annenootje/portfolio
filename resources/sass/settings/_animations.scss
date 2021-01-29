@@ -1,110 +1,112 @@
-@keyframes loadLine {
+@keyframes loadCard {
     0% {
-        height: 0;
+        opacity: 0;
+        transform: translateY(0);
     }
-    100% {
+    10% {
+        opacity: 0;
+        width: 100%;
+        padding-top: 0%;
         height: 100%;
+        border-radius: 0;
     }
-}
-
-@keyframes loadLineImgDelay {
-    0% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    64% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
+    25% {
         opacity: 1;
+        width: 100%;
+        padding-top: 0%;
+        height: 100%;
+        border-radius: 0;
     }
-}
 
-@keyframes loadLineTitleDelay {
-    0% {
-        // transform: translateY(50px);
-        opacity: 0;
-    }
-    64% {
-        // transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        // transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes loadLineImg {
-    0% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
     50% {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
         opacity: 1;
-    }
-}
-
-@keyframes loadLineTitle {
-    0% {
-        // transform: translateY(50px);
-        opacity: 0;
-    }
-    33% {
-        // transform: translateY(50px);
-        opacity: 1;
-    }
-    100% {
-        // transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes loadService {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
+        width: 100%;
+        padding-top: 0%;
+        height: 100%;
+        border-radius: 0;
+        transform: translateY(0px);
     }
     60% {
-        transform: translateY(0px);
-        opacity: 1;
+        box-shadow: none;
     }
     100% {
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(-20px);
     }
 }
 
-@keyframes loadService2 {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
+@keyframes loadCardInner {
+    10% {
+        border-radius: 0;
     }
+
+    50% {
+        border-radius: 0;
+    }
+
+    60% {
+        box-shadow: none;
+    }
+}
+
+@keyframes loadCardImage {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    10% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rotateCard {
+    0% {
+        transform: rotateY(0);
+    }
+    55% {
+        transform: rotateY(0);
+    }
+
     80% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
+        transform: rotateY(180deg);
     }
 }
 
-
-@keyframes loadService3 {
+@keyframes cardHover {
     0% {
-        transform: translateY(50px);
-        opacity: 0;
+        transform: scale(1);
     }
+
+    50% {
+        transform: scale(1.06);
+    
+    }
+
     100% {
-        transform: translateY(0px);
+        transform: scale(1.04);
+    }
+}
+
+@keyframes loadLink {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    85% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
         opacity: 1;
+        transform: translateY(0%);
     }
 }

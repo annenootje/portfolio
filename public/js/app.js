@@ -19332,43 +19332,72 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_home_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/home-slider */ "./resources/js/components/home-slider.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/modal */ "./resources/js/components/modal.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./vanilla-tilt */ "./resources/js/vanilla-tilt.js");
 
 
-var homeSliders = document.querySelectorAll('.home-slider');
+var modalOpeners = document.querySelectorAll('.open-modal');
+var modals = document.querySelectorAll('.modal');
 
-if (homeSliders.length > 0) {
-  homeSliders.forEach(function (homeslider) {
-    var object = new _components_home_slider__WEBPACK_IMPORTED_MODULE_0__["default"](homeslider);
-    object.init();
+if (modalOpeners.length > 0) {
+  modalOpeners.forEach(function (opener) {
+    opener.addEventListener('click', function () {
+      modals.forEach(function (modal) {
+        if (modal.dataset.modal === opener.dataset.modal) {
+          modal.classList.add('-active');
+        }
+      });
+    });
   });
 }
 
-var hamburger = document.querySelector('.hamburger');
-var mobileMenu = document.querySelector('.mobile-menu');
-var header = document.querySelector('header');
-hamburger.addEventListener('click', function () {
-  hamburger.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-  header.classList.toggle('active');
-});
-var greeting = document.querySelector('.greeting');
-var date = new Date();
-var current_hour = date.getHours();
-console.log(current_hour);
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  var isEscape = false;
 
-if (current_hour < 12 && current_hour > 4) {
-  greeting.innerHTML = 'Goedemorgen';
-} else if (current_hour < 18 && current_hour >= 12) {
-  greeting.innerHTML = 'Goedemiddag';
-} else if (current_hour >= 18 && current_hour < 23) {
-  greeting.innerHTML = 'Goedenavond';
-} else {
-  greeting.innerHTML = 'Goedenacht';
-} // window.Vue = require('vue');
+  if ("key" in evt) {
+    isEscape = evt.key === "Escape" || evt.key === "Esc";
+  } else {
+    isEscape = evt.keyCode === 27;
+  }
+
+  if (isEscape) {
+    modals.forEach(function (modal) {
+      modal.classList.remove('-active');
+    });
+  }
+}; // import homeSlider from './components/home-slider';
+// const homeSliders = document.querySelectorAll('.home-slider');
+// if (homeSliders.length > 0) {
+//     homeSliders.forEach((homeslider) => {
+//         const object = new homeSlider(homeslider);
+//         object.init();
+//     });  
+// }
+// let hamburger = document.querySelector('.hamburger');
+// let mobileMenu = document.querySelector('.mobile-menu');
+// let header = document.querySelector('header');
+// hamburger.addEventListener('click', function () {
+//     hamburger.classList.toggle('active');
+//     mobileMenu.classList.toggle('active');
+//     header.classList.toggle('active');
+// });
+// let greeting = document.querySelector('.greeting');
+// var date = new Date();
+// var current_hour = date.getHours();
+// console.log(current_hour);
+// if ( current_hour < 12 && current_hour > 4 ) {
+//     greeting.innerHTML = 'Goedemorgen';
+// } else if ( current_hour < 18 && current_hour >= 12 ) {
+//     greeting.innerHTML = 'Goedemiddag';
+// } else if ( current_hour >= 18 && current_hour < 23 ) {
+//     greeting.innerHTML = 'Goedenavond';
+// } else {
+//     greeting.innerHTML = 'Goedenacht';
+// }
+// window.Vue = require('vue');
 // const app = new Vue({
 //     el: '#app',
 //     data: {
@@ -19433,10 +19462,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/home-slider.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/home-slider.js ***!
-  \************************************************/
+/***/ "./resources/js/components/modal.js":
+/*!******************************************!*\
+  !*** ./resources/js/components/modal.js ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19462,91 +19491,16 @@ var homeSlider = /*#__PURE__*/function () {
      */
     this._container = element;
     /**
-     * @type {NodeListOf<Element>}
-     */
-
-    this._slide = this._container.querySelectorAll('.slide');
-    /**
-     * @type {number}
-     */
-
-    this.index = 0;
-    /**
-     * @type {Element | any}
+     * @type {Element}
      * @private
      */
 
-    this._controls = this._container.querySelector('.controls');
-    /**
-     * @type {Element | any}
-     * @private
-     */
-
-    this._prev = this._container.querySelector('.control.previous');
-    /**
-     * @type {Element | any}
-     * @private
-     */
-
-    this._next = this._container.querySelector('.control.next');
+    this._cross = this._container.querySelectorAll('.modal__cross');
   }
 
   _createClass(homeSlider, [{
     key: "init",
-    value: function init() {
-      this._slide[this.index].classList.add('active');
-
-      if (this._slide.length > 1 && this._controls) {
-        this._controls.classList.add('active');
-      }
-
-      var self = this;
-
-      if (this._next) {
-        this._next.addEventListener('click', function () {
-          self.nextSlide();
-        });
-      }
-
-      if (this._prev) {
-        this._prev.addEventListener('click', function () {
-          self.prevSlide();
-        });
-      } // setTimeout(() => {
-      //     centerTitle.addClass('hide');
-      // });
-
-
-      setInterval(function () {
-        self.nextSlide();
-      }, 5000);
-    }
-  }, {
-    key: "nextSlide",
-    value: function nextSlide() {
-      this._slide[this.index].classList.remove('active');
-
-      this.index = this.index + 1;
-
-      if (this.index >= this._slide.length) {
-        this.index = 0;
-      }
-
-      this._slide[this.index].classList.add('active');
-    }
-  }, {
-    key: "prevSlide",
-    value: function prevSlide() {
-      this._slide[this.index].classList.remove('active');
-
-      this.index = this.index - 1;
-
-      if (this.index < 0) {
-        this.index = this._slide.length - 1;
-      }
-
-      this._slide[this.index].classList.add('active');
-    }
+    value: function init() {}
   }]);
 
   return homeSlider;

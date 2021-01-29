@@ -12,11 +12,8 @@ use App\Blog;
 class PagesController extends Controller
 {
     public function index() {
-        $title = '';
-        $contact = Contactdetail::all();
-        $projects = Blog::all();
 
-        return view('home', compact('contact', 'title', 'projects'));
+        return view('home');
     }
 
     public function about() {

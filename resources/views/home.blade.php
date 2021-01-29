@@ -2,35 +2,50 @@
 
 @section('content')
 
-    <div class='loader'>
-        <span></span>
-        <span></span>
-    </div>
-
-    <section class="line center full-height">
-        <div class="home-slider">
-                
-            <div class="container business-card-container slide  white-line">
-                <div class='business-card' data-tilt data-tilt-scale="1.01" data-tilt-max="20">
-                    <div class="business-card-side business-card-right"></div>
-                    <div class="business-card-side business-card-left"></div>
-                    <div class="business-card-side business-card-bottom"></div>
-                    <div class="business-card-side business-card-top"></div>
-                    <div class="business-card-side business-card-front">
-                        <div class="top">
-                            {{-- <img src="/img/logo.png" alt=""> --}}
-                            <div class="text-right">
-                                <h2>Anne Noteboom</h2>
-                                <a href="mailto:info@annenoteboom.nl">info@annenoteboom.nl</a>
-                            </div>
+    <div class="card__container" data-tilt data-tilt-scale="1.01" data-tilt-max="10">
+        <div onClick="location.href='mailto:info@annenoteboom.nl'" class="card" data-modal="contact">
+            <div class="card__inner">
+                <div class="card__front">
+                    <img src="/img/logo.svg" alt="logo Anne Noteboom">
+                </div>
+                <div class="card__back">
+                    <div class="card__back__inner">
+                        <div class="card__image">
+                            <img src="/img/logo.svg" alt="logo Anne Noteboom">
+                            <img src="/img/hello.svg" alt="">
                         </div>
-                        <h1 class="bottom">Welkom</h1>
+                        <div class="card__content">
+                            <h1>Anne Noteboom</h1>
+                            <a href="mailto:info@annenoteboom.nl">info@annenoteboom.nl</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            @include('./components/project_previews')
-
         </div>
-    </section>
+    </div>
+
+    <a class="link" data-modal="projects" href="mailto:info@annenoteboom.nl">
+        <span class="link__item">Contact opnemen?</span>
+        <div class="link__inner">
+            <span class="link__item">Contact opnemen?</span>
+        </div>
+    </a>
+
+    {{-- <div class="modal modal--projects" data-modal="projects">
+        <div class="modal__cross">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="modal__inner">
+            HALLOOOO
+        </div>
+    </div>
+
+    <div class="modal modal--contact" data-modal="contact">
+        <div class="modal__inner">
+            <h1>Neem contact op</h1>
+        </div>
+    </div> --}}
+
 @endsection

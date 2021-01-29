@@ -1,33 +1,37 @@
 @import url("https://use.typekit.net/tfo1msj.css");
 
 %heading-1 {
-  line-height: 1;
-  font-size: 48px;
-  font-weight: 800;
+  line-height: 1.5;
+  font-size: 38px;
+  font-weight: 600;
+
+  @media (max-width: $media-sm) {
+    font-size: 24px;
+  }
 }
 
 %heading-2 {
   line-height: 1;
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 %heading-3 {
   line-height: 1;
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 %heading-4 {
   line-height: 1;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 %heading-5 {
   line-height: 1;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 %heading-6 {
@@ -39,7 +43,11 @@
 %text {
   font-family: sofia-pro, sans-serif;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 400;
-  color: black;
+  color: white;
+
+  @media (max-width: $media-sm) {
+    font-size: 14px;
+  }
 }
