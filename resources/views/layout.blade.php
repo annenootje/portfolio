@@ -9,6 +9,7 @@
             gtag('js', new Date());
             gtag('config', 'UA-113963563-1');
         </script>
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Voor al uw websites, websites en webapps">
@@ -16,8 +17,10 @@
         <meta name="author" content="Anne Noteboom"/>
         <meta name="copyright" content="Anne Noteboom"/>
         <meta name="robots" content="index"/>
+
+        <title>Anne Noteboom | Websitemaker</title>
+
         <link rel="stylesheet" href="/css/app.css">
-        <title>Anne Noteboom ~ Websitemaker</title>
         <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
         <link rel="alternate icon" href="/favicon.ico">
         <link rel="mask-icon" href="/img/favicon.svg" color="black">

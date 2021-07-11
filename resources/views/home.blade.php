@@ -31,6 +31,14 @@
         </div>
     </a>
 
+    <div onClick="window.open('https://www.ek-balgevoel.nl', '_blank');" class="notification">
+        <div class="notification__inner">
+            <p>🎉🎉</p>
+            <h6 class="notification__title">Nieuw project online!</h6>
+            <p class="notification__text"><a target="_blank" href="https://www.ek-balgevoel.nl">Bekijk ek-balgevoel.nl</a></p>
+        </div>
+    </div>
+
     {{-- <div class="modal modal--projects" data-modal="projects">
         <div class="modal__cross">
             <div></div>
