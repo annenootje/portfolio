@@ -35,6 +35,40 @@ document.onkeydown = function(evt) {
     }
 }
 
+const slider = document.querySelector('.--projects');
+const slider__items = slider.querySelectorAll('.slider__item');
+
+let index = 0;
+
+slider__items[index].classList.add('-active');
+
+setInterval(() => {
+    slider__items[index].classList.remove('-active');
+    index = index + 1;
+
+    if (index === slider__items.length) {
+        index = 0;
+    }
+
+    slider__items[index].classList.add('-active');
+}, 10000);
+
+const header = document.querySelector('header');
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+        header.classList.add('-scrolled');
+    } else {
+        header.classList.remove('-scrolled');
+    }
+});
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (event) => {
+	cursor.style.left = event.clientX + 'px';
+	cursor.style.top = event.clientY + 'px';
+});
 // import homeSlider from './components/home-slider';
 
 // const homeSliders = document.querySelectorAll('.home-slider');

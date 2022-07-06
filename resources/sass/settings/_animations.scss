@@ -5,42 +5,28 @@
     }
     10% {
         opacity: 0;
-        width: 100%;
-        padding-top: 0%;
-        height: 100%;
-        border-radius: 0;
     }
     25% {
         opacity: 1;
-        width: 100%;
-        padding-top: 0%;
-        height: 100%;
-        border-radius: 0;
     }
 
     50% {
         opacity: 1;
-        width: 100%;
-        padding-top: 0%;
-        height: 100%;
-        border-radius: 0;
         transform: translateY(0px);
     }
     60% {
-        box-shadow: none;
+
     }
     100% {
-        transform: translateY(-20px);
+        // transform: translateY(-20px);
     }
 }
 
 @keyframes loadCardInner {
     10% {
-        border-radius: 0;
     }
 
     50% {
-        border-radius: 0;
     }
 
     60% {
@@ -51,18 +37,18 @@
 @keyframes loadCardImage {
     0% {
         opacity: 0;
-        transform: scale(1.2);
+        // transform: scale(1.2);
     }
     10% {
         opacity: 0;
-        transform: scale(1.2);
+        // transform: scale(1.2);
     }
     25% {
         opacity: 1;
-        transform: scale(1.2);
+        // transform: scale(1.2);
     }
     60% {
-        transform: scale(1.2);
+        // transform: scale(1.2);
     }
 }
 
@@ -108,5 +94,30 @@
     100% {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@keyframes sliderItemAfter {
+    0% {
+        width: 0;
+        
+    }
+    44.9% {
+        left: unset;
+        right: 0;
+    }
+    45%, 55% {
+        left: 0;
+        right: unset;
+        width: 100%;
+    }
+    45.1% {
+        right: unset;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        right: unset;
+        left: 0;
     }
 }

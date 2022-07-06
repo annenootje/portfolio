@@ -1,11 +1,17 @@
-$transition: 450ms ease-in-out;
-$transition-fast: 300ms ease-in-out;
+$transition: .45s cubic-bezier(.7, 0, .1, 1);
+$transition-fast: .3s cubic-bezier(.7, 0, .1, 1);
 
 //colors
 $black: #070707;
 $blue: #18E6F3;
 $red: #FF1542;
 $grey: #F7F7F7;
+
+$coquelicots: #3528DE;
+$coquelicots-light: #6C60FF;
+
+$huisvanmijn: #a67151;
+$huisvanmijn: #EDDAC9;
 
 //max-width
 $max-width: 10000px;

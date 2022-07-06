@@ -19368,7 +19368,35 @@ document.onkeydown = function (evt) {
       modal.classList.remove('-active');
     });
   }
-}; // import homeSlider from './components/home-slider';
+};
+
+var slider = document.querySelector('.--projects');
+var slider__items = slider.querySelectorAll('.slider__item');
+var index = 0;
+slider__items[index].classList.add('-active');
+setInterval(function () {
+  slider__items[index].classList.remove('-active');
+  index = index + 1;
+
+  if (index === slider__items.length) {
+    index = 0;
+  }
+
+  slider__items[index].classList.add('-active');
+}, 10000);
+var header = document.querySelector('header');
+document.addEventListener('scroll', function () {
+  if (window.scrollY > 10) {
+    header.classList.add('-scrolled');
+  } else {
+    header.classList.remove('-scrolled');
+  }
+});
+var cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', function (event) {
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + 'px';
+}); // import homeSlider from './components/home-slider';
 // const homeSliders = document.querySelectorAll('.home-slider');
 // if (homeSliders.length > 0) {
 //     homeSliders.forEach((homeslider) => {

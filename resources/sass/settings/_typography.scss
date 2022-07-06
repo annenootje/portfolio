@@ -10,20 +10,6 @@ html {
 
 * {
   @extend %text;
-
-  // cursor: url('/img/mouse.png'), auto;	
-  
-  &.red {
-    color: $red;
-  }
-
-  &.light {
-    color: rgba(225,255,255,.5);
-  }
-
-  &.white {
-    color: white;
-  }
 }
 
 h1 {
@@ -58,44 +44,21 @@ p {
   @extend %text;
 
   + h4 {
+    margin-top: 5px;
+  }
+
+  & + h2 {
     margin-top: 10px;
   }
 
-  &.blue {
-    color: $blue;
-  }
-
-  &.lightblue {
-    color: $blue;
-    opacity: .4;
-  }
-
-  &.uppercase {
+  &.-uppercase {
     text-transform: uppercase;
   }
-
-  &.small {
-    font-size: 12px;
-  }
-
-  // a {
-  //   color: $blue !important;
-
-  //   &:hover {
-  //     color: $black !important;
-  //   }
-  // }
 }
 
 a {
   text-decoration: none;
-  opacity: .6;
-
   transition: opacity $transition-fast;
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 ul {

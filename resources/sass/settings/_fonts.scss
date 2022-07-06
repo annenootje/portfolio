@@ -1,9 +1,26 @@
-@import url("https://use.typekit.net/tfo1msj.css");
+@font-face {
+  font-family: 'Oregon LDO Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Oregon LDO Regular'), url('/fonts/Oregon_LDO.woff') format('woff');
+}
+
+$font-text: 'Josefin Sans', sans-serif;
+$font-heading: 'Oregon LDO Regular';
 
 %heading-1 {
-  line-height: 1.5;
-  font-size: 38px;
-  font-weight: 600;
+  font-family: serif;
+  line-height: 1.2;
+  font-size: 4.5vw;
+  font-weight: 400;
+  color: white;
+
+  span {
+    font: inherit;
+    font-family: $font-text;
+    line-height: inherit;
+    font-weight: 600 !important;
+  }
 
   @media (max-width: $media-sm) {
     font-size: 24px;
@@ -12,7 +29,7 @@
 
 %heading-2 {
   line-height: 1;
-  font-size: 36px;
+  font-size: 2.8vw;
   font-weight: 600;
 }
 
@@ -41,13 +58,9 @@
 }
 
 %text {
-  font-family: sofia-pro, sans-serif;
+  font-family: $font-text;
   line-height: 1.5;
-  font-size: 22px;
+  font-size: min(max(1.1vw, 14px), 20px);
   font-weight: 400;
   color: white;
-
-  @media (max-width: $media-sm) {
-    font-size: 14px;
-  }
 }

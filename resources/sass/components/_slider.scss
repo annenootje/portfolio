@@ -1,0 +1,243 @@
+.slider {
+    position: relative;
+
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__inner {
+        width: 100%;
+        padding-top: 63%;
+    }
+
+    &__controls {
+        // position: fixed;
+        top: 0;
+        bottom: 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 100%;
+        // margin: auto;
+        width: 24px;
+    }
+
+    &__control {
+        position: relative;
+        
+        display: flex;
+        justify-content: center;
+
+        cursor: pointer;
+
+        span {
+            display: block;
+
+            transition: $transition;
+
+            border-radius: 5px;
+            width: 2px;
+
+            background-color: white;
+
+            &:first-child {
+                height: 60px;
+            }
+            
+            &:nth-child(2),
+            &:nth-child(3) {
+                position: absolute;
+                top: -3px;
+                
+                height: 15px;
+            }
+            
+            &:nth-child(2) {
+                left: -40%;
+                right: 0;
+
+                margin: auto;
+                transform: rotate(45deg);
+            }
+            
+            &:nth-child(3) {
+                left: 0;
+                right: -40%;
+
+                margin: auto;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:first-child {
+            &:hover {
+                span {
+                    &:first-child {
+                        height: 90px;
+                        margin-top: -30px;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        top: -33px;
+                    }
+                }
+            }
+        }
+
+        & + & {
+            margin-top: 40px;
+
+            span {
+                &:nth-child(2),
+                &:nth-child(3) {
+                    top: unset;
+                    bottom: -3px;
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(-45deg);
+                }
+                
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                }
+            }
+            
+            &:hover {
+                span {
+                    &:first-child {
+                        height: 90px;
+                        margin-bottom: -30px;
+                    }
+    
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        bottom: -33px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        @include absolute-cover;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        opacity: 0;
+
+        padding: 3vw;
+
+        background-color: white;
+        background-size: cover;
+
+        * {
+            position: relative;
+            z-index: 1;
+
+            opacity: 0;
+            transition: opacity 450ms 750ms;
+
+            color: black;
+        }
+        
+        &::after {
+            content: '';
+
+            @include absolute-cover;
+
+            left: unset;
+            right: 0;
+
+            width: 0;
+        }
+
+        &.-active {
+            opacity: 1;
+
+            * {
+                opacity: 1;
+            }
+
+            &::after {
+                animation: sliderItemAfter 1200ms;
+            }
+        }
+
+        &.-coquelicots {
+            &::after {
+                background-color: $coquelicots;
+            }
+        }
+
+        &.-huis-van-mijn {
+            &::after {
+                background-color: $huisvanmijn;
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        * {
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .line {
+            position: relative;
+
+            height: 230px;
+            width: 2px;
+            margin: 20px 0;
+            border-radius: 6px;
+
+            background-color: white;
+        }
+
+        .control {
+            position: absolute;
+            top: 18%;
+            left: 0;
+
+            display: flex;
+            flex-direction: column;
+
+            border-radius: 6px;
+            width: 2px;
+            height: calc(100% / 7);
+
+            background-color: $coquelicots;
+
+            &::before,
+            &::after {
+                content: '';
+
+                position: absolute;
+
+                display: block;
+                
+                height: 10px;
+                width: 2px;
+
+                background-color: black;
+            }
+
+            &::before {
+                top: -10px;
+            }
+
+            &::after {
+                bottom: -10px;
+            }
+        }
+    }
+}

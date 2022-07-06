@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 40px;
+
+  * {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
