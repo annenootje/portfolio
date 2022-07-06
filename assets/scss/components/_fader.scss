@@ -1,0 +1,11 @@
+#app {
+    .faders {
+        .fader {
+            display: none !important;
+      
+            &.-active {
+                display: flex !important;
+            }
+        }
+    }
+}

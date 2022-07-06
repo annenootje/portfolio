@@ -1,0 +1,28 @@
+.logo {
+    position: fixed;
+    top: $space-top;
+    left: $space-side;
+    z-index: 80;
+
+    display: flex;
+    align-items: center;
+
+    animation: navLoader $loadertime;
+
+    div {
+        margin-bottom: 2px;
+    }
+
+    svg {
+        display: block;
+
+        width: 2.1vw;
+        min-width: 25px;
+        height: auto;
+        margin-right: 1.3vw;
+    }
+
+    * {
+        color: white;
+    }
+}

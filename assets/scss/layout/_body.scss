@@ -1,0 +1,40 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include text;
+
+  background-color: $color-2;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  cursor: none !important;
+
+  * {
+    cursor: none !important;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+
+  img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+  }
+}

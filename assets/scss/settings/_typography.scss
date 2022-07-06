@@ -1,0 +1,47 @@
+h1, .heading-1 {
+    @include h1;
+}
+
+h2, .heading-2 {
+    @include h2;
+}
+
+h3, .heading-3 {
+    @include h3;
+}
+
+h4, .heading-4 {
+    @include h4;
+}
+
+h5, .heading-5 {
+    @include h5;
+}
+
+h6, .heading-6 {
+    @include h6;
+}
+
+a {
+    @include link;
+}
+
+p {
+    @include text;
+}
+
+small {
+    font-size: 18px !important;
+}
+
+.quote {
+    @include quote;
+}
+
+@include heading-tags {
+    @include text-styles;
+}
+
+@include text-tags {
+    @include text-styles;
+}

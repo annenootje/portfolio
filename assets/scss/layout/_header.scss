@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+
+  transition: transform $transition;
+
+  .container {
+    @include container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100px;
+
+    .menu {
+      
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.link {
+    display: block;
+
+    transition:
+        background-size $transition,
+        background-position $transition,
+        color $transition;
+    
+    padding-bottom: 10px;
+    
+    background-image: linear-gradient($color-1, $color-1);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    
+    @include h2;
+
+    text-transform: uppercase;
+    
+    @keyframes backgroundPosition {
+        0%, 99%, 100% {
+            background-position: 0 100%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+    
+    &:hover {
+        background-size: 0 0;
+        background-position: 100% 100%;
+        
+        animation: backgroundPosition 450ms;
+
+        color: $color-1;
+    }
+
+    &.-uppercase {
+        text-transform: uppercase;
+    }
+
+    & + & {
+        margin-top: 0;
+        margin-left: 1.5vw;
+    }
+}

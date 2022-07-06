@@ -1,0 +1,37 @@
+.naming {
+    position: fixed;
+    top: $space-top;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    
+    margin: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    animation: navLoader $loadertime;
+    
+    h2 {
+      display: none;
+      align-items: flex-end;
+
+      margin: 0;
+      
+      &.-active {
+        display: flex;
+      }
+    }
+
+    &.-starter {
+      z-index: 80;
+
+      h2 {
+        display: flex;
+        
+        opacity: 0;
+        pointer-events: none;
+
+        animation: nameLoader $loadertime;
+      }
+    }
+  }

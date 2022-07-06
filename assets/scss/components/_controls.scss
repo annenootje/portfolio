@@ -1,0 +1,68 @@
+.controls {
+    // position: fixed;
+    right: $space-side;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: fit-content;
+    height: -moz-fit-content;
+    margin: auto;
+
+    &__container {
+        position: relative;
+
+        height: 21vh;
+        width: 2px;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        background-color: white;
+    }
+
+    &__control {
+        position: absolute;
+        top: 0;
+
+        transition: top $transition;
+
+        display: flex !important;
+        flex-direction: column;
+                
+        border-radius: 4px;        
+        width: 100%;
+
+        background-color: var(--color-1);
+   
+        &::before,
+        &::after {
+            content: '';
+
+            position: absolute;
+            bottom: 100%;
+            z-index: 1;
+            
+            height: 8px;
+            width: 100%;
+
+            display: block;
+            
+            background-color: var(--color-dark);
+        }
+
+        &::after {
+            bottom: unset;
+            top: 100%;
+        }
+    }
+
+    * {
+        color: white;
+        text-align: center;
+        font-weight: 600;
+    }
+}

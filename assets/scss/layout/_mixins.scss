@@ -1,0 +1,143 @@
+@mixin container($size: 'standard') {
+  @include grid;
+
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $space-side;
+  padding-left: $space-side;
+
+  @if $size == 'full-width' {
+    max-width: unset;
+    padding-right: 0;
+    padding-left: 0;
+
+  } @else if $size == 'small' {
+    max-width: $max-width-s;
+  } @else if $size == 'extra-small' {
+    max-width: $max-width-xs;
+  } @else {
+    max-width: $max-width;
+  }
+
+  @if $size != 'full-width' {
+    @include media-m {
+      padding-right: $space-side-m;
+      padding-left: $space-side-m;
+    }
+  }
+}
+
+@mixin space-standard ($side) {
+  #{$side}: $space-standard;
+
+  @include media-l {
+    #{$side}: $space-standard-l;
+  }
+
+  @include media-m {
+    #{$side}: $space-standard-m;
+  }
+
+  @include media-s {
+    #{$side}: $space-standard-s;
+  }
+
+  @include media-xs {
+    #{$side}: $space-standard-xs;
+  }
+}
+
+@mixin space-small ($side) {
+  #{$side}: $space-small;
+
+  @include media-l {
+    #{$side}: $space-small-l;
+  }
+
+  @include media-m {
+    #{$side}: $space-small-m;
+  }
+
+  @include media-s {
+    #{$side}: $space-small-s;
+  }
+
+  @include media-xs {
+    #{$side}: $space-small-xs;
+  }
+}
+
+@mixin space-large ($side) {
+  #{$side}: $space-large;
+
+  @include media-l {
+    #{$side}: $space-large-l;
+  }
+
+  @include media-m {
+    #{$side}: $space-large-m;
+  }
+
+  @include media-s {
+    #{$side}: $space-large-s;
+  }
+
+  @include media-xs {
+    #{$side}: $space-large-xs;
+  }
+}
+
+@mixin space-col {
+  margin-bottom: -#{$space-col};
+
+  @include media-l {
+    margin-bottom: -#{$space-col-l};
+  }
+
+  @include media-m {
+    margin-bottom: -#{$space-col-m};
+  }
+
+  @include media-s {
+    margin-bottom: -#{$space-col-s};
+  }
+
+  @include media-xs {
+    margin-bottom: -#{$space-col-xs};
+  }
+
+  @include col {
+    margin-bottom: #{$space-col};
+
+    @include media-l {
+      margin-bottom: #{$space-col-l};
+    }
+
+    @include media-m {
+      margin-bottom: #{$space-col-m};
+    }
+
+    @include media-s {
+      margin-bottom: #{$space-col-s};
+    }
+
+    @include media-xs {
+      margin-bottom: #{$space-col-xs};
+    }
+  }
+}
+
+@mixin line-colored ($background: $color-1) {
+  @include space-standard(padding-top);
+  @include space-standard(padding-bottom);
+
+  background-color: $background;
+}
+
+@mixin section-colored ($background: $color-1) {
+  @include space-standard(padding-top);
+  @include space-standard(padding-bottom);
+
+  background-color: $background;
+}

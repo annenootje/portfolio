@@ -1,0 +1,100 @@
+.hamburger {
+  position: fixed;
+  top: calc(#{$space-top} - 10px);
+  right: calc(#{$space-side} - 10px);
+  z-index: 80;
+
+  display: block;
+
+  animation: navLoader $loadertime;
+  transform: translateY(50%);
+  
+  padding: 0 10px;
+  width: $hamburger-width;
+  height: $hamburger-span-width;
+
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: inline-block;
+
+    @include transition();
+
+    width: $hamburger-span-width;
+    height: $hamburger-span-height;
+
+    background-color: $hamburger-span-color;
+
+    &:nth-of-type(1) {
+      top: 50%;
+      left: 0;
+      
+      transform-origin: left;
+      transition-delay: 650ms;
+      
+      margin-top: -1px;
+    }
+
+    &:nth-of-type(2) {
+      top: 100%;
+      
+      transform-origin: top;
+      transition-delay: 450ms;
+    }
+    
+    &:nth-of-type(3) {
+      top: 18%;
+      left: 25%;
+
+      transform-origin: top;
+      transform: rotate(-45deg) translate(50%);
+
+      height: 0;
+      width: $hamburger-span-height;
+    }
+    
+    &:nth-of-type(4) {
+      top: 13%;
+      left: 70%;
+
+      transform-origin: top;
+      transform: rotate(45deg) translate(50%);
+
+      height: 0;
+      width: $hamburger-span-height;
+    }
+  }
+
+  &.-active {
+
+    span {
+      background-color: $hamburger-span-color-active;
+
+      &:nth-of-type(1) {
+        width: 0;
+
+        animation: hamburgerSpan1 .8s;
+      }
+
+      &:nth-of-type(2) {
+        height: 0;
+
+        animation: hamburgerSpan2 .8s;
+      }
+
+      &:nth-of-type(3) {
+        transition: $transition 450ms;
+        height: $hamburger-span-width;
+      }
+
+      &:nth-of-type(4) {
+        transition: $transition 650ms;
+        height: $hamburger-span-width;
+      }
+    }
+  }
+}

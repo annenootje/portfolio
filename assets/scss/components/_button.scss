@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  @include h2;
+
+  color: var(--color-1);
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &__icon {
+    display: block;
+
+    margin-left: 10px;
+    height: 100%;
+    width: auto;
+
+    &.-left {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}

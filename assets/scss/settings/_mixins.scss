@@ -1,0 +1,216 @@
+// Backgrounds
+
+@mixin background-cover($image : "") {
+  @if ($image != "") {
+    background-image: url($image);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin background-contain($image : "") {
+  @if ($image != "") {
+    background-image: url($image);
+  }
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// Transitions
+
+@mixin transition($duration : "") {
+  @if ($duration != "") {
+    transition: $duration;
+  } @else {
+    transition: $transition;
+  }
+}
+
+// Fade into view
+
+@mixin fade-into-view($transform : "", $duration : "") {
+  opacity: 0;
+
+  @if ($duration != "") {
+    @include transition($duration);
+  } @else {
+    @include transition($transition-slow);
+  }
+
+  @if ($transform != "") {
+    transform: translateY($transform);
+  } @else {
+    transform: translateY(70px);
+  }
+
+  &.-into-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Visiblity (with transition)
+
+@mixin visibility($type: 'show') {
+
+  @if $type == "hide" {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: $transition;
+
+  } @else if $type == "show" {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+// Text effects
+
+@mixin text-columns($columns, $gap) {
+  column-count: $columns;
+  column-gap: $gap;
+}
+
+@mixin text-ellipsis($width: '100%') {
+  max-width: $width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Media queries
+
+@mixin media-xs {
+  @media (max-width: $media-xs) {
+    @content;
+  }
+}
+
+@mixin media-s {
+  @media (max-width: $media-s) {
+    @content;
+  }
+}
+
+@mixin media-m {
+  @media (max-width: $media-m) {
+    @content;
+  }
+}
+
+@mixin media-l {
+  @media (max-width: $media-l) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (max-width: $media-xl) {
+    @content;
+  }
+}
+
+// Object-fit
+
+@mixin object-contain($position: center, $width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+  object-fit: contain;
+  object-position: $position;
+}
+
+@mixin object-cover($position: center, $width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-position: $position;
+}
+
+// Color blenders
+
+@mixin color-multiply($color: $color-1) {
+  background-color: $color;
+  background-blend-mode: multiply;
+}
+
+// Aspect-ratio
+
+@mixin aspect-ratio($percent: 100%, $side: 'top') {
+  height: 0;
+  padding-#{$side}: $percent;
+}
+
+// cols
+
+@mixin col {
+  [class*="col"] {
+    @content;
+  }
+}
+
+@function grid-col ($size: 1, $model: $grid-model, $gutter: $grid-gutter) {
+  @if $size == 0 {
+    @return 0px;
+  }
+  @return (calc(((#{$max-width} - (#{$gutter} * (#{$model} - 1))) / #{$model}) * #{$size} + (#{$gutter} * (#{$size} - 1))));
+}
+
+// Colors
+@mixin background-colors {
+  &.-color-1 {
+    background-color: $color-1;
+  }
+
+  &.-color-2 {
+    background-color: $color-2;
+  }
+
+  &.-color-3 {
+    background-color: $color-3;
+  }
+
+  &.-white {
+    background-color: white;
+  }
+
+  &.-black {
+    background-color: $color-black;
+  }
+}
+
+// Overview
+
+@function item-width ($size: 1, $gutter-x, $gutter-y, $model) {
+  @return (calc((#{$size} * 100% / #{$model}) - #{$gutter-x}));
+}
+
+@mixin overview ($width: 12, $gutter-x: $grid-gutter, $gutter-y: 20px, $model: $grid-model) {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(#{-$gutter-x} / 2);
+  margin-right: calc(#{-$gutter-x} / 2);
+  margin-bottom: -$gutter-y;
+  width: calc(100% + (#{$gutter-x}));
+
+  &__item {
+    width: item-width($width, $gutter-x, $gutter-y, $model);
+    margin: 0 calc(#{$gutter-x} / 2);
+    margin-bottom: $gutter-y;
+  }
+}
+
+@mixin absolute-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
