@@ -1,7 +1,53 @@
 .card {
-    width: 200px;
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 0 80px 100px rgba(0, 0, 0, 1);
-    background-color: grey;
+    width: 31vw;
+    height: 0;
+    margin-bottom: 1vw;
+    padding-top: calc(60% * .31);
+    border-radius: 3%;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 1);
+    margin-left: -17vw;
+    
+    background-color: $color-dark;
+
+    &__inner {
+        @include absolute-cover;
+
+        display: flex;
+        justify-content: space-between;
+
+        padding: 3.3vw;
+
+        * {
+            color: white;
+        }
+    }
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__right {
+        img {
+            width: 35px;
+        }
+    }
+
+    &::before {
+        content: '';
+
+        position: fixed;
+        top: -100vh;
+        left: -100vw;
+
+        display: block;
+
+        width: 300vw;
+        height: 300vh;
+    }
+}
+
+.js-tilt-glare {
+    border-radius: 3%;
 }

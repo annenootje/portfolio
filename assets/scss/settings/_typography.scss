@@ -1,5 +1,15 @@
 h1, .heading-1 {
     @include h1;
+
+    opacity:.4;
+
+    &:nth-child(2) {
+        margin-left: 6.4vw;
+    }
+    
+    &:nth-child(3) {
+        margin-left: 1.2vw;
+    }
 }
 
 h2, .heading-2 {

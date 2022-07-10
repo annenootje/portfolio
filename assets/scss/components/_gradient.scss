@@ -1,0 +1,14 @@
+.gradient {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: none;
+
+    width: 40vw;
+    height: 40vw;
+    margin-top: 0vh;
+    margin-left: -25vw;
+
+    background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
+}

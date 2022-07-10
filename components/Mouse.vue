@@ -1,8 +1,6 @@
 <template>
-    <div class="cursor__wrapper">
-        <div class="cursor">
-            <div class="cursor__inner"></div>
-        </div>
+    <div class="cursor">
+        <div class="cursor__inner"></div>
     </div>
 </template>
 

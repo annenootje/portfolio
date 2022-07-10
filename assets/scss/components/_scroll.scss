@@ -1,0 +1,56 @@
+.scroll {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    border-radius: 100%;
+
+    width: 4.5vw;
+    height: 4.5vw;
+    border: 1px solid white;
+
+    &__text {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+
+        transform: rotate(90deg);
+
+        color: white;
+
+        &::after {
+            content: '';
+
+            width: 30px;
+            height: 1px;
+            margin-left: 10px;
+
+            background-color: white;
+        }
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1px;
+
+        display: block;
+        
+        margin: auto;
+        width: 1.5vw;
+        height: calc(100% + 2px);
+
+        background-color: $color-2;
+    }
+}

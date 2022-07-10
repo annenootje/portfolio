@@ -3,11 +3,44 @@
   <div class="layout">
 
     <!-- <Logo /> -->
+
+    <div class="cursor__wrapper"></div>
+
+    <div class="gradient"></div>
+
     <section>
       <div class="container">
-        <div class="card" data-tilt-max="10" data-title-scale="2"></div>
+        <div class="intro">
+          <div>
+            <h1>creative</h1>
+            <h1>web</h1>
+            <h1>developer</h1>
+          </div>
+          <div class="card" data-tilt>
+            <div class="card__inner">
+              <div class="card__left">
+                <div>
+                  <h2>Anne Noteboom</h2>
+                  <p>Websites, -shops & -apps</p>
+                </div>
+                <div>
+                  <a href="mailto:info@anne.no">info@anne.no</a><br/>
+                  <a href="mailto:31639723285">+31 6 39 72 32 85</a>
+                </div>
+              </div>
+              <div class="card__right">
+                <img src="@/assets/img/logo.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <div class="scroll">
+      <div class="scroll__circle"></div>
+      <p class="scroll__text">PROJECTEN</p>
+    </div>
 
     <!-- <div class="naming -starter">
       <h2>Anne Noteboom <h3>&nbsp;/ Portfolio</h3></h2>
@@ -148,7 +181,13 @@
 
       const element = document.querySelector(".card");
       
-      VanillaTilt.init(element);
+      VanillaTilt.init(element, {
+        max: 15,
+        glare: false,
+        "max-glare": .1,
+        reverse: true,
+        speed: "4000"
+      });
     },
 
     methods: {

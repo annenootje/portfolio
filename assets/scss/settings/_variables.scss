@@ -26,6 +26,8 @@ $color-3-hover: #D34C4C;
 $color-3-active: #BC4141;
 
 $color-black: #121212;
+$color-dark: #121212;
+
 
 $color-success: #16C100;
 $color-success-light: #F7F8F8;
@@ -50,24 +52,24 @@ $grid-model-xs: 4;
 $grid-gutter-xs: 3.2%;
 
 // Typography
-$h1-font: josefin-sans, sans-serif;
-$h1-size: clamp(2.1vw, 42px, 20px);
+$h1-font: "Ginger";
+$h1-size: clamp(12vw, 20px, 230px);
 $h1-size-l: 21px;
 $h1-size-m: 21px;
 $h1-size-s: 21px;
 $h1-line-height: 1.23;
 $h1-weight: 400;
 $h1-color: white;
-$h1-space: 4vw;
-$h1-space-l: 0.521vw;
-$h1-space-m: 0.521vw;
-$h1-space-s: 0.521vw;
+$h1-space: -3.5vw;
+$h1-space-l: 0.1vw;
+$h1-space-m: 0.1vw;
+$h1-space-s: 0.1vw;
 
-$h2-font: josefin-sans, sans-serif;
-$h2-size: clamp(1.1vw, 60px, 16px);
-$h2-size-l: clamp(1.1vw, 60px, 16px);
-$h2-size-m: clamp(1.1vw, 60px, 16px);
-$h2-size-s: clamp(1.1vw, 60px, 16px);
+$h2-font: sofia-pro, sans-serif;
+$h2-size: clamp(1.4vw, 60px, 16px);
+$h2-size-l: clamp(1.4vw, 60px, 16px);
+$h2-size-m: clamp(1.4vw, 60px, 16px);
+$h2-size-s: clamp(1.4vw, 60px, 16px);
 $h2-line-height: 1.33;
 $h2-weight: 600;
 $h2-color: white;
@@ -76,20 +78,20 @@ $h2-space-l: 0.521vw;
 $h2-space-m: 0.521vw;
 $h2-space-s: 5px;
 
-$h3-font: josefin-sans, sans-serif;
+$h3-font: sofia-pro, sans-serif;
 $h3-size: clamp(.85vw, 60px, 12px);
 $h3-size-l: clamp(.85vw, 60px, 12px);
 $h3-size-m: clamp(.85vw, 60px, 12px);
 $h3-size-s: clamp(.85vw, 60px, 12px);
 $h3-line-height: 1.33;
-$h3-weight: 400;
+$h3-weight: 300;
 $h3-color: white;
 $h3-space: 20px;
 $h3-space-l: 20px;
 $h3-space-m: 20px;
 $h3-space-s: 20px;
 
-$h4-font: josefin-sans, sans-serif;
+$h4-font: sofia-pro, sans-serif;
 $h4-size: 28px;
 $h4-size-l: 24px;
 $h4-size-m: 20px;
@@ -102,7 +104,7 @@ $h4-space-l: 20px;
 $h4-space-m: 20px;
 $h4-space-s: 20px;
 
-$h5-font: josefin-sans, sans-serif;
+$h5-font: sofia-pro, sans-serif;
 $h5-size: 24px;
 $h5-size-l: 20px;
 $h5-size-m: 16px;
@@ -115,7 +117,7 @@ $h5-space-l: 20px;
 $h5-space-m: 20px;
 $h5-space-s: 20px;
 
-$h6-font: josefin-sans, sans-serif;
+$h6-font: sofia-pro, sans-serif;
 $h6-size: 20px;
 $h6-size-l: 16px;
 $h6-size-m: 16px;
@@ -128,13 +130,13 @@ $h6-space-l: 10px;
 $h6-space-m: 10px;
 $h6-space-s: 10px;
 
-$text-font: josefin-sans, sans-serif;
+$text-font: sofia-pro, sans-serif;
 $text-size: 16px;
 $text-size-l: 16px;
 $text-size-m: 16px;
 $text-size-s: 16px;
 $text-line-height: 1.5;
-$text-weight: 400;
+$text-weight: 300;
 $text-weight-medium: 500;
 $text-color: $color-black;
 $text-space: 30px;

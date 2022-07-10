@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://use.typekit.net/lgw5dfv.css");
 
+@font-face {
+    font-family: "Ginger", serif;
+    src: url('@/assets/fonts/ginger.otf');
+}
+
 @import 'settings/variables';
 @import 'settings/mixins';
 @import 'settings/fonts';
@@ -24,4 +29,7 @@
 @import 'components/controls';
 @import 'components/menu';
 @import 'components/card';
+@import 'components/intro';
+@import 'components/gradient';
+@import 'components/scroll';
   
