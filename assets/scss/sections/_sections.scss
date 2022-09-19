@@ -1,4 +1,4 @@
-.section {
+section {
 
   .container {
       @include space-col;
@@ -10,7 +10,7 @@
       }
   }
 
-  & + .section:not(.--colored) {
+  & + section:not(.--colored) {
       @include space-standard(margin-top);
   }
 

@@ -13,7 +13,7 @@ $media-hamburger: 900px;
 }
 
 // Colors
-$color-1: #A7FD00;
+$color-1: #C5F27F;
 $color-1-hover: #A7FD00;
 $color-1-active: #A7FD00;
 
@@ -52,7 +52,9 @@ $grid-model-xs: 4;
 $grid-gutter-xs: 3.2%;
 
 // Typography
-$h1-font: "Ginger";
+$font-heading: "Ginger";
+
+$h1-font: $font-heading;
 $h1-size: clamp(12vw, 20px, 230px);
 $h1-size-l: 21px;
 $h1-size-m: 21px;
@@ -65,17 +67,17 @@ $h1-space-l: 0.1vw;
 $h1-space-m: 0.1vw;
 $h1-space-s: 0.1vw;
 
-$h2-font: sofia-pro, sans-serif;
-$h2-size: clamp(1.4vw, 60px, 16px);
+$h2-font: $font-heading;
+$h2-size: clamp(1.8vw, 60px, 16px);
 $h2-size-l: clamp(1.4vw, 60px, 16px);
 $h2-size-m: clamp(1.4vw, 60px, 16px);
 $h2-size-s: clamp(1.4vw, 60px, 16px);
 $h2-line-height: 1.33;
 $h2-weight: 600;
 $h2-color: white;
-$h2-space: 0.3vw;
-$h2-space-l: 0.521vw;
-$h2-space-m: 0.521vw;
+$h2-space: 0.25vw;
+$h2-space-l: 0.4vw;
+$h2-space-m: 0.4vw;
 $h2-space-s: 5px;
 
 $h3-font: sofia-pro, sans-serif;
@@ -131,7 +133,7 @@ $h6-space-m: 10px;
 $h6-space-s: 10px;
 
 $text-font: sofia-pro, sans-serif;
-$text-size: 16px;
+$text-size: clamp(1.2vw, 60px, 12px);
 $text-size-l: 16px;
 $text-size-m: 16px;
 $text-size-s: 16px;

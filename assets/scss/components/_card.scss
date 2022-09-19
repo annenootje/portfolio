@@ -1,13 +1,40 @@
 .card {
-    width: 31vw;
+    width: 30vw;
     height: 0;
     margin-bottom: 1vw;
-    padding-top: calc(60% * .31);
-    border-radius: 3%;
+    padding-top: calc(62% * .30);
+    border-radius: 25px ;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 1);
     margin-left: -17vw;
     
     background-color: $color-dark;
+
+    a {
+        display: flex;
+        align-items: center;
+
+        padding-top: 4px;
+        color: $color-1;
+
+        svg {
+            transition: transform $transition;
+
+            margin-right: 14px;
+            width: 1.4vw;
+            margin-bottom: -.3vw;
+            fill: $color-1;
+
+            * {
+                fill: $color-1;
+            }
+        }
+
+        &:hover {
+            svg {
+                transform: translateX(5px);
+            }
+        }
+    }
 
     &__inner {
         @include absolute-cover;
@@ -20,6 +47,19 @@
         * {
             color: white;
         }
+
+        &:hover {
+            img {
+                &:nth-of-type(1) {
+                    transform: translateY(-25px);
+                    opacity: 0;
+                }
+                &:nth-of-type(2) {
+                    opacity: 1;
+                    transform: translateY(-5px);
+                }
+            }
+        }
     }
 
     &__left {
@@ -29,8 +69,24 @@
     }
 
     &__right {
+    }
+    
+    &__image {
+        position: relative;
+
+        width: 2.1vw;
+
         img {
-            width: 35px;
+            transition: 
+                opacity $transition,
+                transform $transition;
+            position: absolute;
+            width: 100%;
+
+            &:nth-of-type(2) {
+                opacity: 0;
+                transform: translateY(25px);
+            }
         }
     }
 
@@ -49,5 +105,5 @@
 }
 
 .js-tilt-glare {
-    border-radius: 3%;
+    border-radius: 25px;
 }

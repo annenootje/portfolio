@@ -1,0 +1,28 @@
+.case {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: 1px solid transparentize(white, .4);
+
+    .tag {
+        // background-color: $color-1;
+        // color: $color-black;
+        border-radius: 4px;
+        display: block;
+        width: fit-content;
+        width: -moz-fit-content;
+        // padding: 1px 6px 2px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    &:nth-child(1) {
+        border-top: 1px solid transparentize(white, .4);
+    }
+}

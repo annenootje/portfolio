@@ -1,4 +1,14 @@
-.footer {
+footer {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+
+  padding-top: 140px;
+  padding-bottom: 60px;
+
+  * {
+    font-family: $font-heading; 
+  }
 
   .container {
     @include container;

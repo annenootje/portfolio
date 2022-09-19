@@ -5,11 +5,9 @@
 }
 
 body {
-  overflow: hidden;
   
   display: flex;
   flex-direction: column;
-  height: 100%;
 
   @include text;
 
@@ -18,22 +16,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  cursor: none !important;
-
-  .layout {
-    overflow: hidden;
-  }
+  // cursor: none !important;
 
   * {
-    cursor: none !important;
+    // cursor: none !important;
+
+    color: white;
   }
 
   main {
     flex: 1 0 auto;
-  }
-
-  footer {
-    flex-shrink: 0;
   }
 
   img {
@@ -41,4 +33,28 @@ body {
       max-width: 100%;
       height: auto;
   }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparentize(white, .6);
+  // border-radius: 10px;
+  border-right: 6px solid $color-black;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -7,6 +7,8 @@
     opacity: 0;
     transition: $transition, transform 0s;
     mix-blend-mode: difference;
+
+    pointer-events: none;
     
     &__wrapper {
         position: fixed;
@@ -21,7 +23,7 @@
     }
     
     &__inner {
-        transition: $transition;
+        // transition: $transition;
         transform-origin: center;
 
         margin-top: -25px;
@@ -30,6 +32,8 @@
         height: 50px;
         border: 1px solid white;
         border-radius: 100%;
+
+        pointer-events: none;
 
         transform: scale(1);
         animation: resetCursor .35s ease-out;
