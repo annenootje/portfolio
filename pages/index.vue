@@ -60,24 +60,30 @@
     <section> 
       <div class="container">
         <div class="portfolio">
-          <div class="portfolio__item case">
-            <div>
-              <span class="tag">Website</span>
-              <h2>Coquelicots</h2>
-            </div>
-          </div>
-          <div class="portfolio__item case">
-            <div>
-              <span class="tag">Webshop</span>
-              <h2>Huis van Mijn</h2>
-            </div>
-          </div>
-          <div class="portfolio__item case">
-            <div>
-              <span class="tag">Website</span>
-              <h2>Cocktailbar Caipiroski</h2>
-            </div>
-          </div>
+          <a href="https://coquelicots.nl" target="_blank" class="portfolio__item case">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Coquelicots</h2>
+          </a>
+          <a href="https://studiohuisvanmijn.nl" target="_blank" class="portfolio__item case">
+            <span class="case__type">Webshop</span>
+            <h2 class="case__title">Studio Huis van Mijn</h2>
+          </a>
+          <a href="https://dnalegal.nl" target="_blank" class="portfolio__item case">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">DNA Legal</h2>
+          </a>
+          <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Cocktailbar Caipiroski</h2>
+          </a>
+          <a href="https://leertafels.nl/" target="_blank" class="portfolio__item case">
+            <span class="case__type">Webapp</span>
+            <h2 class="case__title">Tafels leren met Bram</h2>
+          </a>
+          <a href="https://ek-balgevoel.nl/" target="_blank" class="portfolio__item case">
+            <span class="case__type">Webapp</span>
+            <h2 class="case__title">EK balgevoel</h2>
+          </a>
         </div>
       </div>
     </section>

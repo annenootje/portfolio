@@ -1,28 +1,45 @@
 .case {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    border-bottom: 1px solid transparentize(white, .4);
 
-    .tag {
-        // background-color: $color-1;
-        // color: $color-black;
-        border-radius: 4px;
-        display: block;
-        width: fit-content;
-        width: -moz-fit-content;
-        // padding: 1px 6px 2px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 5px;
+    &__title {
+        font-size: 3.6vw;
+    }
+
+    &__type {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-bottom: 1.2vw;
+
         text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
     }
 
     &:nth-child(1) {
-        border-top: 1px solid transparentize(white, .4);
+        transform: translateX(-8vw);
+    }
+    &:nth-child(2) {
+        transform: translateX(-4vw);
+    }
+    &:nth-child(3) {
+        transform: translateX(-12vw);
+    }
+    &:nth-child(4) {
+        transform: translateX(4vw);
+    }
+    &:nth-child(5) {
+        transform: translateX(-10vw);
+    }
+    &:nth-child(6) {
+        transform: translateX(4vw);
     }
 }

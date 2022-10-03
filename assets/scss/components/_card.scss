@@ -3,7 +3,7 @@
     height: 0;
     margin-bottom: 1vw;
     padding-top: calc(62% * .30);
-    border-radius: 25px ;
+    border-radius: 5px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 1);
     margin-left: -17vw;
     
@@ -14,7 +14,7 @@
         align-items: center;
 
         padding-top: 4px;
-        color: $color-1;
+        // color: $color-1;
 
         svg {
             transition: transform $transition;
@@ -22,10 +22,10 @@
             margin-right: 14px;
             width: 1.4vw;
             margin-bottom: -.3vw;
-            fill: $color-1;
+            fill: white;
 
             * {
-                fill: $color-1;
+                fill: white;
             }
         }
 
