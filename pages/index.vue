@@ -2,8 +2,6 @@
 
   <div class="layout">
 
-    <!-- <Logo /> -->
-
     <div class="cursor__wrapper"></div>
 
     <div class="gradient"></div>
@@ -21,26 +19,24 @@
               <div class="card__left">
                 <div>
                   <h2>Anne Noteboom</h2>
-                  <p>Webcreator</p>
+                  <p>Welkom op mijn portfolio</p>
                 </div>
                 <div>
-                  <a href="https://www.linkedin.com/in/anne-noteboom-61b121158/?originalSubdomain=nl" target="_blank">
+                  <a class="link" href="https://www.linkedin.com/in/anne-noteboom-61b121158/?originalSubdomain=nl" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
-  <g id="arrow-right" transform="translate(1 0.385)">
-    <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
-    <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
-  </g>
-</svg>
-
+                      <g id="arrow-right" transform="translate(1 0.385)">
+                        <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
+                        <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
+                      </g>
+                    </svg>
                   LinkedIn</a>
-                  <a href="mailto:info@anne.no">
+                  <a class="link" href="mailto:info@anne.no">
                       <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
-  <g id="arrow-right" transform="translate(1 0.385)">
-    <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
-    <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
-  </g>
-</svg>
-
+                        <g id="arrow-right" transform="translate(1 0.385)">
+                          <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
+                          <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
+                        </g>
+                      </svg>
                     info@anne.no</a>
                   <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
                 </div>
@@ -61,26 +57,32 @@
       <div class="container">
         <div class="portfolio">
           <a href="https://coquelicots.nl" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/coquelicots-website.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Coquelicots</h2>
           </a>
           <a href="https://studiohuisvanmijn.nl" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/huisvanmijn-webshop.png" alt="Webshop Studio Huis van Mijn preview">
             <span class="case__type">Webshop</span>
             <h2 class="case__title">Studio Huis van Mijn</h2>
           </a>
           <a href="https://dnalegal.nl" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">DNA Legal</h2>
           </a>
           <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/cocktailbar-website.png" alt="Website Cocktailbar preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Cocktailbar Caipiroski</h2>
           </a>
           <a href="https://leertafels.nl/" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">Tafels leren met Bram</h2>
           </a>
           <a href="https://ek-balgevoel.nl/" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">EK balgevoel</h2>
           </a>
@@ -260,10 +262,9 @@
       
       VanillaTilt.init(element, {
         max: 5,
-        glare: false,
         "max-glare": .1,
         reverse: true,
-        speed: "2000"
+        speed: "2000",
       });
     },
 

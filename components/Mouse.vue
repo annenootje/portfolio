@@ -10,6 +10,7 @@
 
         mounted() {
             const cursor = document.querySelector(".cursor"),
+                cases = document.querySelectorAll(".case"),
                 links = document.querySelectorAll(".link"),
                 canvas = document.querySelector(".cursor__wrapper");
             
@@ -25,6 +26,18 @@
             document.addEventListener("mousemove", moveCursor),
             window.addEventListener("load", moveCursor),
 
+            cases && cases.forEach(e => {
+                e.addEventListener("mouseenter", () => {
+                    cursor.classList.add("-active"),
+                    cursor.classList.add("-case")
+                }),
+
+                e.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("-active"),
+                    cursor.classList.remove("-case")
+                })
+            })
+            
             links && links.forEach(e => {
                 e.addEventListener("mouseenter", () => {
                     cursor.classList.add("-active"),

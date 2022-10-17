@@ -10,5 +10,8 @@
     margin-top: 0vh;
     margin-left: -25vw;
 
+    opacity: .3;
+    filter: blur(14px);
+
     background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
 }

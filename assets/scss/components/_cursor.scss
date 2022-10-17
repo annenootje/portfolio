@@ -23,7 +23,9 @@
     }
     
     &__inner {
-        // transition: $transition;
+        transition: width $transition,
+            height $transition,
+            margin $transition;
         transform-origin: center;
 
         margin-top: -25px;
@@ -44,11 +46,28 @@
     }
 
     &.-link {
-        width: 0;
-        height: 0;
-        margin-top: -1.5px;
-        margin-left: -1.5px;
-        border-width: 0px; 
+        .cursor__inner {
+            width: 1px;
+            height: 1px;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    &.-case {
+        .cursor__inner {
+            width: 80px;
+            height: 80px;
+            margin-top: -50px;
+            margin-left: -50px;
+
+            background-image: url("~/assets/img/arrow-white.svg");
+            background-size: 2.3vw;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            animation: setCursor .35s ease-out;
+        }
     }
 
     &.-slide {

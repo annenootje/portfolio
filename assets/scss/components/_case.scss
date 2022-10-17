@@ -3,21 +3,56 @@
     justify-content: center;
     align-items: flex-end;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.6vw;
+    padding-bottom: 1.6vw;
     width: 100%;
 
     &__title {
+        transition: opacity $transition;
         font-size: 3.6vw;
     }
 
     &__type {
+        transition: opacity $transition;
+
         margin-left: 1vw;
         margin-right: 1vw;
         margin-bottom: 1.2vw;
 
         text-transform: uppercase;
         font-weight: 500;
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+
+        transition: $transition;
+        transform: scale(.8);
+        opacity: 0;
+
+        pointer-events: none;
+
+        margin: auto;
+        width: 12vw;
+        height: 12vw;
+        object-fit: contain;
+    }
+
+    &:hover {
+        .case__title,
+        .case__type {
+            opacity: 0;
+        }
+
+        .case__image {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     &:nth-child(even) {
