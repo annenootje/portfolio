@@ -1,19 +1,21 @@
 .scroll {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 5vw;
+    bottom: 10vw;
+    left: 0;
+    right: 0;
 
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+
+    transition: opacity $transition;
 
     margin: auto;
     border-radius: 100%;
 
-    width: 5vw;
-    height: 5vw;
-    border: 1px solid white;
+    @include media-s {
+        display: flex;
+    }
 
     &__text {
         position: relative;
@@ -22,38 +24,54 @@
         display: flex;
         align-items: center;
 
-        transform: rotate(90deg);
+        padding-top: 5px;
+        padding-bottom: 5px;
         
         margin-top: -.1vw;
 
-        font-size: .9vw;
+        font-size: 3vw;
         color: white;
+        white-space: nowrap;
 
-        &::after {
-            content: '';
-
-            width: 3vw;
-            height: 1px;
-            margin-left: 10px;
-
-            background-color: white;
-        }
+        background-color: $color-2;
     }
 
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80%;
+
+        display: block;
+        
+        margin: auto;
+        width: 5vw;
+        height: 15vw;
+
+        background-color: $color-2;
+    }
+    
     &::after {
         content: '';
 
         position: absolute;
         left: 0;
         right: 0;
-        top: -1px;
+        bottom: -4vw;
 
         display: block;
         
         margin: auto;
-        width: 2vw;
-        height: calc(100% + 2px);
+        width: 1px;
+        height: 15vw;
 
-        background-color: $color-2;
+        background-color: white;
+    }
+
+    &.-scrolled {
+        opacity: 0;
+        pointer-events: none;
     }
 }

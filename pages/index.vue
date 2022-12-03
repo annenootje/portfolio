@@ -30,14 +30,15 @@
                       </g>
                     </svg>
                   LinkedIn</a>
-                  <a class="link" href="mailto:info@anne.no">
+                  <a class="link" href="mailto:hallo@anne.web">
                       <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
                         <g id="arrow-right" transform="translate(1 0.385)">
                           <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
                           <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
                         </g>
                       </svg>
-                    info@anne.no</a>
+                    hallo@anne.web
+                  </a>
                   <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
                 </div>
               </div>
@@ -57,43 +58,43 @@
       <div class="container">
         <div class="portfolio">
           <a href="https://coquelicots.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/coquelicots-website.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/coquelicots-home.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Coquelicots</h2>
           </a>
           <a href="https://studiohuisvanmijn.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/huisvanmijn-webshop.png" alt="Webshop Studio Huis van Mijn preview">
+            <img class="case__image" src="@/assets/img/huisvanmijn.png" alt="Webshop Studio Huis van Mijn preview">
             <span class="case__type">Webshop</span>
             <h2 class="case__title">Studio Huis van Mijn</h2>
           </a>
           <a href="https://dnalegal.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/dnalegal-website-preview.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">DNA Legal</h2>
           </a>
           <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/cocktailbar-website.png" alt="Website Cocktailbar preview">
+            <img class="case__image" src="@/assets/img/cocktailbar-website-preview.png" alt="Website Cocktailbar preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Cocktailbar Caipiroski</h2>
           </a>
           <a href="https://leertafels.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/bram-preview.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">Tafels leren met Bram</h2>
           </a>
           <a href="https://ek-balgevoel.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/ekbalgevoel-webapp.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/balgevoel-square.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">EK balgevoel</h2>
           </a>
         </div>
       </div>
-    </section>
 
-    <!-- <div class="scroll">
-      <div class="scroll__circle"></div>
-      <p class="scroll__text">PROJECTEN</p>
-    </div> -->
+      <a class="scroll" id="scroll" href="#scroll">
+        <div class="scroll__circle"></div>
+        <p class="scroll__text">Scroll down to projects</p>
+      </a>
+    </section>
 
     <!-- <section>
       <div class="container">
@@ -253,6 +254,23 @@
     },
 
     mounted() {
+
+      const scroll = document.querySelector('.scroll');
+
+      if (scroll) {
+        window.addEventListener('scroll', () => {
+          setScrollClass();  
+        })
+        setScrollClass();
+      }
+
+      function setScrollClass() {
+        if (window.scrollY > 10) {
+          scroll.classList.add('-scrolled');
+        } else {
+          scroll.classList.remove('-scrolled');
+        }
+      }
       
       setTimeout(() => {
         this.startSlider();

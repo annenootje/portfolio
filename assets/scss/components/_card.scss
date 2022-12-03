@@ -4,10 +4,20 @@
     margin-bottom: 1vw;
     padding-top: calc(62% * .30);
     border-radius: 5%;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 1);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 1),
+        0 20px 120px rgba(0, 0, 0, 1);
     margin-left: -17vw;
     
     background-color: $color-dark;
+
+    @include media-s {
+        align-self: flex-end;
+        width: 70vw;
+        margin-left: 0;
+        margin-top: -3vw;
+        padding-top: calc(75% * .70);
+    }
 
     a {
         display: flex;
@@ -21,6 +31,7 @@
 
             margin-right: 14px;
             width: 1.4vw;
+            min-width: 12px;
             margin-bottom: -.3vw;
             fill: white;
 
@@ -43,6 +54,10 @@
         justify-content: space-between;
 
         padding: 3.3vw;
+
+        @include media-s {
+            padding: 7vw;
+        }
 
         * {
             color: white;
@@ -75,6 +90,11 @@
         position: relative;
 
         width: 2.1vw;
+        min-width: 18px;
+
+        @include media-s {
+            margin-top: 2px;
+        }
 
         img {
             transition: 

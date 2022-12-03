@@ -53,19 +53,20 @@ $grid-gutter-xs: 3.2%;
 
 // Typography
 $font-heading: "Ginger";
+$font-text: sofia-pro, sans-serif;
 
 $h1-font: $font-heading;
-$h1-size: clamp(12vw, 20px, 230px);
-$h1-size-l: 21px;
-$h1-size-m: 21px;
-$h1-size-s: 21px;
+$h1-size: clamp(11.5vw, 20px, 230px);
+$h1-size-l: clamp(11.5vw, 20px, 230px);
+$h1-size-m: clamp(11.5vw, 20px, 230px);
+$h1-size-s: clamp(18vw, 20px, 230px);
 $h1-line-height: 1.23;
 $h1-weight: 400;
 $h1-color: white;
 $h1-space: -3.5vw;
-$h1-space-l: 0.1vw;
-$h1-space-m: 0.1vw;
-$h1-space-s: 0.1vw;
+$h1-space-l: -3.5vw;
+$h1-space-m: -3.5vw;
+$h1-space-s: -5.5vw;
 
 $h2-font: $font-heading;
 $h2-size: clamp(1.8vw, 60px, 16px);
@@ -134,9 +135,9 @@ $h6-space-s: 10px;
 
 $text-font: sofia-pro, sans-serif;
 $text-size: clamp(1.1vw, 60px, 12px);
-$text-size-l: 16px;
-$text-size-m: 16px;
-$text-size-s: 16px;
+$text-size-l: clamp(1.1vw, 60px, 12px);
+$text-size-m: clamp(1.1vw, 60px, 10px);
+$text-size-s: clamp(1.1vw, 60px, 10px);
 $text-line-height: 1.5;
 $text-weight: 300;
 $text-weight-medium: 500;

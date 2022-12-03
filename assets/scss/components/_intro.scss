@@ -6,4 +6,33 @@
     justify-content: center;
 
     min-height: 100vh;
+
+    @include media-s {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        padding-top: 15vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    &::after {
+        content: '';
+
+        @include absolute-cover;
+
+        top: -40%;
+
+        height: 100%;
+
+        transform: rotate(30deg);
+        transform-origin: left;
+
+        background: linear-gradient(to top, $color-2, transparent, transparent);
+
+        @include media-l {
+            display: none;
+        }
+    }
 }

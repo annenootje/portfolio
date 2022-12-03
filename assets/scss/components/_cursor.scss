@@ -23,6 +23,7 @@
     }
     
     &__inner {
+        position: relative;
         transition: width $transition,
             height $transition,
             margin $transition;
@@ -39,6 +40,50 @@
 
         transform: scale(1);
         animation: resetCursor .35s ease-out;
+
+        &::before {
+            content: 'Discover';
+
+            @include absolute-cover;
+
+            padding-top: 5px;
+            padding-bottom: 9px;
+
+            height: fit-content;
+            height: -moz-fit-content;
+            width: fit-content;
+            width: -moz-fit-content;
+            
+            left: unset;
+            right: -2px;
+            bottom: 0;
+
+            margin: auto;
+            
+            background-color: $color-2;
+            transform: scale(0);
+            opacity: 0;
+            transition: $transition;
+            
+            text-align: center;
+            font-size: 1vw;
+        }
+        
+        // &::after {
+        //     content: '';
+
+        //     @include absolute-cover;
+        //     @include background-contain("~/assets/img/icons/arrow-right.svg");
+
+        //     left: calc(100% - 20px);
+        //     bottom: -5px;
+
+        //     margin: auto;
+        //     width: 50px;
+        //     height: 30px;
+
+        //     background-color: $color-2;
+        // }
     }
 
     &.-active {
@@ -56,17 +101,24 @@
 
     &.-case {
         .cursor__inner {
+            @include flex-center;
+
             width: 80px;
             height: 80px;
             margin-top: -50px;
             margin-left: -50px;
 
-            background-image: url("~/assets/img/arrow-white.svg");
+            // background-image: url("~/assets/img/arrow-white.svg");
             background-size: 2.3vw;
             background-position: center;
             background-repeat: no-repeat;
 
             animation: setCursor .35s ease-out;
+
+            &::before {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     }
 

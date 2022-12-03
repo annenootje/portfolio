@@ -7,9 +7,17 @@
     padding-bottom: 1.6vw;
     width: 100%;
 
+    @include media-s {
+        padding-bottom: 6vw;
+    }
+
     &__title {
         transition: opacity $transition;
         font-size: 3.6vw;
+
+        @include media-s {
+            font-size: 6.2vw;
+        }
     }
 
     &__type {
@@ -39,19 +47,24 @@
 
         margin: auto;
         width: 12vw;
-        height: 12vw;
-        object-fit: contain;
+        height: 8vw;
+        object-fit: cover;
     }
 
     &:hover {
-        .case__title,
+        .case__title {
+            opacity: 0.1;
+            -webkit-text-stroke: .001em white;
+            color: transparent;
+        }
+
         .case__type {
-            opacity: 0;
+            opacity: 0.1;
         }
 
         .case__image {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) skew(-3deg);
         }
     }
 
