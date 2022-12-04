@@ -29,6 +29,8 @@
         transform: rotate(30deg);
         transform-origin: left;
 
+        pointer-events: none;
+
         background: linear-gradient(to top, $color-2, transparent, transparent);
 
         @include media-l {

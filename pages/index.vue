@@ -58,7 +58,7 @@
       <div class="container">
         <div class="portfolio">
           <a href="https://coquelicots.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/coquelicots-home.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/coquelicots-startscreen.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Coquelicots</h2>
           </a>
@@ -83,7 +83,7 @@
             <h2 class="case__title">Tafels leren met Bram</h2>
           </a>
           <a href="https://ek-balgevoel.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/balgevoel-square.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/ekbalgevoel-square.png" alt="Webapp EK Balgevoel preview">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">EK balgevoel</h2>
           </a>
