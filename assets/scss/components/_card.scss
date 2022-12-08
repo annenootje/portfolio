@@ -3,10 +3,10 @@
     height: 0;
     margin-bottom: 1vw;
     padding-top: calc(62% * .30);
-    border-radius: 5%;
+    border-radius: 7%;
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 1),
-        0 20px 120px rgba(0, 0, 0, 1);
+        0 30px 80px rgba(0, 0, 0, .7),
+        0 20px 120px rgba(0, 0, 0, .7);
     margin-left: -17vw;
     
     background-color: $color-dark;
@@ -44,6 +44,12 @@
             svg {
                 transform: translateX(5px);
             }
+        }
+    }
+
+    h2 {
+        & + p {
+            font-size: clamp(1vw, 60px, 12px);
         }
     }
 

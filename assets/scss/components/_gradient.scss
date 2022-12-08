@@ -1,17 +1,23 @@
 .gradient {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 10vw;
+    right: 0;
+    top: 10vh;
+    bottom: 0;
 
-    display: none;
+    display: block;
 
-    width: 40vw;
-    height: 40vw;
-    margin-top: 0vh;
-    margin-left: -25vw;
+    width: 80vw;
+    height: 80vw;
+    // margin-top: -20vh;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: auto;
+
 
     opacity: .3;
     filter: blur(14px);
 
-    background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
+    // background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
+    background-image: url("~/assets/img/gradient-round.svg");
 }
