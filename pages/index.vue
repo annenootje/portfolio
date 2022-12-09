@@ -9,13 +9,13 @@
     <section>
       <div class="container">
         <div class="intro">
-          <div>
+          <div class="intro__title">
             <h1>creative</h1>
             <h1>web</h1>
             <h1>developer</h1>
           </div>
-          <div class="card" data-tilt>
-            <div class="card__inner">
+          <div class="card" >
+            <div class="card__inner" data-tilt>
               <div class="card__left">
                 <div>
                   <h2>Anne Noteboom</h2>
@@ -48,6 +48,9 @@
                   <img src="@/assets/img/hello.svg" />
                 </div>
               </div>
+            </div>
+            <div class="card__overlay">
+              <img src="@/assets/img/logo.svg" />
             </div>
           </div>
         </div>
@@ -207,7 +210,7 @@
     </div> -->
 
     <footer>
-      <p>&copy;{{ new Date().getFullYear() }} Anne Noteboom</p>
+      <p><span>&copy;{{ new Date().getFullYear() }} Anne Noteboom</span> <span class="divider">|</span> <a href="mailto:info@anne.web">info@anne.web</a></p>
     </footer>
 
   </div>
@@ -259,6 +262,7 @@
 
       if (scroll) {
         window.addEventListener('scroll', () => {
+          console.log('hio')
           setScrollClass();  
         })
         setScrollClass();
@@ -275,15 +279,38 @@
       setTimeout(() => {
         this.startSlider();
       }, 5000);
-
+      
       const element = document.querySelector(".card");
       
       VanillaTilt.init(element, {
-        max: 5,
-        "max-glare": .1,
+        max: 10,
         reverse: true,
-        speed: "2000",
+        speed: "2500",
       });
+
+      const gradient = document.querySelector('.gradient');
+      let opacity = 0;
+      console.log(gradient);
+
+      function setGradientOpacity() {
+        opacity = .2 - window.scrollY / 500;
+
+        console.log(opacity);
+        
+        if (opacity < 0) {
+          gradient.style.opacity = 0;
+        } else {
+          gradient.style.opacity = opacity;
+        }
+      }
+
+      setGradientOpacity();
+
+      window.addEventListener('scroll', () => {
+        console.log('hio')
+        setGradientOpacity();
+      });
+
     },
 
     methods: {

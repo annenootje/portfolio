@@ -1,4 +1,12 @@
 .card {
+    position: absolute;
+    left: 34vw;
+    right: 0;
+    z-index: 9;
+
+    transform-origin: center;
+
+    margin: auto;
     width: 30vw;
     height: 0;
     margin-bottom: 1vw;
@@ -7,11 +15,56 @@
     box-shadow:
         0 30px 80px rgba(0, 0, 0, .7),
         0 20px 120px rgba(0, 0, 0, .7);
-    margin-left: -17vw;
     
     background-color: $color-dark;
 
+    @media (min-width: $media-s) {
+        animation: loadCard 5s ease;
+    }
+
+    @keyframes loadCard {
+        0%, 10% {
+            pointer-events: none;
+            left: 0;
+            transform: scale(3.5) rotateY(-180deg);
+
+            // background-color: $color-2;
+        }
+
+        20% {
+            left: 0;
+            transform: scale(1) rotateY(-180deg);
+        }
+        30% {
+            left: 0;
+        }
+        40% {
+            transform: scale(1) rotateY(0);
+        }
+        50% {
+            pointer-events: auto;
+            left: 34vw;
+        }
+    }
+    
+    @keyframes loadInnerCard {
+        0% {
+            opacity: 0;
+        }
+        25%, 25.9% {
+            opacity: 0;
+
+        }
+        30% {
+            opacity: 1;
+        }
+    }
+
     @include media-s {
+        position: relative;
+        left: unset;
+        right: unset;
+
         align-self: flex-end;
         width: 70vw;
         margin-left: 0;
@@ -53,13 +106,54 @@
         }
     }
 
+    &__overlay {
+        @include absolute-cover;
+        @include flex-center;
+
+        transform: rotateY(-180deg);
+        pointer-events: none;
+
+        opacity: 0;
+
+        @media (min-width: $media-s) {
+            animation: loadLogoCard 5s ease;
+        }
+        
+        
+        @keyframes loadLogoCard {
+                0% {
+                    transform: scale(.5) rotateY(-180deg);
+                    opacity: 1;
+                }
+                30% {
+                    transform: scale(1) rotateY(-180deg);
+                }
+                24%, 24.9% {
+                    opacity: 1;
+
+                }
+                25% {
+                    opacity: 0;
+                }
+            }
+
+        img {
+            width: 2.5vw;
+        }
+    }
+
     &__inner {
         @include absolute-cover;
 
         display: flex;
         justify-content: space-between;
 
+        
         padding: 3.3vw;
+        
+        @media (min-width: $media-s) {
+            animation: loadInnerCard 5s ease;
+        }        
 
         @include media-s {
             padding: 7vw;
@@ -124,6 +218,7 @@
         left: -100vw;
 
         display: block;
+        pointer-events: none;
 
         width: 300vw;
         height: 300vh;

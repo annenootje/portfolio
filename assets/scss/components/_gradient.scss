@@ -2,22 +2,45 @@
     position: fixed;
     left: 10vw;
     right: 0;
-    top: 10vh;
-    bottom: 0;
+    top: 0vh;
+    bottom: 20vh;
 
     display: block;
 
-    width: 80vw;
-    height: 80vw;
+    width: 70vw;
+    height: 70vw;
     // margin-top: -20vh;
     // margin-left: auto;
     // margin-right: auto;
     margin: auto;
+    transition: 0s;
 
-
-    opacity: .3;
+    opacity: .2;
     filter: blur(14px);
 
     // background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
     background-image: url("~/assets/img/gradient-round.svg");
+    background-position: center;
+
+    animation: loadGradient 5s ease;
+
+    @keyframes loadGradient {
+        0%, 30% {
+            opacity: 0;
+            transform: scale(.5);
+        }
+        60% {
+            opacity: .3;
+            transform: scale(1);
+        }
+    }
+
+    @include media-s {
+        left: 5vw;
+        top: 3vh;
+
+        margin: 0;
+        width: 100vw;
+        height: 100vw;
+    }
 }

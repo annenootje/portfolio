@@ -1,4 +1,5 @@
 .intro {
+    position: relative;
     overflow: hidden;
     
     display: flex;
@@ -7,12 +8,43 @@
 
     min-height: 100vh;
 
+    &__title {
+        position: absolute;
+        right: 17vw;
+        left: 0;
+
+        width: fit-content;
+        width: -moz-fit-content;
+        margin: auto;
+
+        animation: loadTitle 10s ease;
+
+        @keyframes loadTitle {
+            0%, 15% {
+                transform: translateX(10vw);
+                opacity: 0;
+            }
+            25% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+        }
+
+        @include media-s {
+            position: relative;
+            left: unset;
+            right: unset;
+            margin: 0;
+        }
+    }
+
     @include media-s {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         
-        padding-top: 15vw;
+        padding-top: 12vh;
         padding-left: 10vw;
         padding-right: 10vw;
     }
