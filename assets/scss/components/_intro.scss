@@ -1,6 +1,7 @@
 .intro {
     position: relative;
     overflow: hidden;
+    z-index: 0;
     
     display: flex;
     align-items: center;
@@ -54,7 +55,7 @@
 
         @include absolute-cover;
 
-        top: -30%;
+        top: -20%;
 
         height: 100%;
 

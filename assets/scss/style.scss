@@ -6,6 +6,11 @@
     src: url('~/assets/fonts/ginger.otf');
 }
 
+@font-face {
+    font-family: "Eastman";
+    src: url('~/assets/fonts/eastmand.otf');
+}
+
 @import 'settings/variables';
 @import 'settings/mixins';
 @import 'settings/fonts';
@@ -30,6 +35,7 @@
 @import 'components/controls';
 @import 'components/menu';
 @import 'components/card';
+@import 'components/tape';
 @import 'components/intro';
 @import 'components/gradient';
 @import 'components/scroll';

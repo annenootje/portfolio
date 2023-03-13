@@ -25,10 +25,16 @@
 
         margin-left: 1vw;
         margin-right: 1vw;
-        margin-bottom: 1.2vw;
+        margin-bottom: .9vw;
 
         text-transform: uppercase;
         font-weight: 500;
+
+        @include media-s {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 1.4vw;
+        }
     }
 
     &__image {
@@ -53,8 +59,8 @@
 
     &:hover {
         .case__title {
-            opacity: 0.1;
-            -webkit-text-stroke: .001em white;
+            opacity: 0.2;
+            -webkit-text-stroke: .01em white;
             color: transparent;
         }
 
@@ -64,7 +70,7 @@
 
         .case__image {
             opacity: 1;
-            transform: scale(1) skew(-3deg);
+            transform: scale(1);
         }
     }
 
@@ -77,15 +83,28 @@
     }
     &:nth-child(2) {
         transform: translateX(-4vw);
+
+        @include media-s {
+            transform: translateX(1vw);
+        }
     }
     &:nth-child(3) {
         transform: translateX(-12vw);
+        
+        @include media-s {
+            transform: translateX(-4vw);
+        }
     }
     &:nth-child(4) {
         transform: translateX(4vw);
     }
     &:nth-child(5) {
         transform: translateX(-10vw);
+        
+        @include media-s {
+            transform: translateX(-5vw);
+        }
+
     }
     &:nth-child(6) {
         transform: translateX(4vw);

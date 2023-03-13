@@ -1,42 +1,45 @@
 .gradient {
-    position: fixed;
-    left: 10vw;
+    position: absolute;
+    left: 0;
     right: 0;
-    top: 0vh;
-    bottom: 20vh;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
 
     display: block;
 
-    width: 70vw;
-    height: 70vw;
+    width: 100vw;
+    height: 100vh;
     // margin-top: -20vh;
     // margin-left: auto;
     // margin-right: auto;
     margin: auto;
     transition: 0s;
 
-    opacity: .2;
-    filter: blur(14px);
+    opacity: .4;
+    filter: blur(10px);
 
     // background: radial-gradient(circle at center, $color-1 0, transparentize($color-1, 1) 50%);
-    background-image: url("~/assets/img/gradient-round.svg");
+    @include background-cover("~/assets/img/lijn.png");
     background-position: center;
+    background-size: cover;
 
     animation: loadGradient 5s ease;
 
     @keyframes loadGradient {
         0%, 30% {
             opacity: 0;
-            transform: scale(.5);
+            // transform: scale(.5);
         }
         60% {
-            opacity: .3;
-            transform: scale(1);
+            opacity: .4;
+            // transform: scale(1);
         }
     }
 
     @include media-s {
-        left: 5vw;
+        left: 0;
         top: 3vh;
 
         margin: 0;

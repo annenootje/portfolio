@@ -13,7 +13,7 @@ $media-hamburger: 900px;
 }
 
 // Colors
-$color-1: #C5F27F;
+$color-1: #0000ab;
 $color-1-hover: #A7FD00;
 $color-1-active: #A7FD00;
 
@@ -25,8 +25,8 @@ $color-3: #DDDDDD;
 $color-3-hover: #D34C4C;
 $color-3-active: #BC4141;
 
-$color-black: #121212;
-$color-dark: rgb(13, 13, 13);
+$color-black: #141414;
+$color-dark: rgb(14, 14, 14);
 
 
 $color-success: #16C100;
@@ -52,14 +52,14 @@ $grid-model-xs: 4;
 $grid-gutter-xs: 3.2%;
 
 // Typography
-$font-heading: "Ginger";
-$font-text: sofia-pro, sans-serif;
+$font-heading: "Eastman";
+$font-text: "Eastman";
 
 $h1-font: $font-heading;
 $h1-size: clamp(11.5vw, 20px, 230px);
 $h1-size-l: clamp(11.5vw, 20px, 230px);
 $h1-size-m: clamp(11.5vw, 20px, 230px);
-$h1-size-s: clamp(18vw, 20px, 230px);
+$h1-size-s: clamp(16vw, 20px, 230px);
 $h1-line-height: 1.23;
 $h1-weight: 400;
 $h1-color: white;
@@ -72,16 +72,16 @@ $h2-font: $font-heading;
 $h2-size: clamp(1.8vw, 60px, 16px);
 $h2-size-l: clamp(1.4vw, 60px, 16px);
 $h2-size-m: clamp(1.4vw, 60px, 16px);
-$h2-size-s: clamp(1.4vw, 60px, 16px);
+$h2-size-s: 20px;
 $h2-line-height: 1.33;
-$h2-weight: 600;
+$h2-weight: 400;
 $h2-color: white;
 $h2-space: 0.25vw;
 $h2-space-l: 0.4vw;
 $h2-space-m: 0.4vw;
 $h2-space-s: 5px;
 
-$h3-font: sofia-pro, sans-serif;
+$h3-font: $font-text;
 $h3-size: clamp(.85vw, 60px, 12px);
 $h3-size-l: clamp(.85vw, 60px, 12px);
 $h3-size-m: clamp(.85vw, 60px, 12px);
@@ -94,20 +94,20 @@ $h3-space-l: 20px;
 $h3-space-m: 20px;
 $h3-space-s: 20px;
 
-$h4-font: sofia-pro, sans-serif;
+$h4-font: $font-text;
 $h4-size: 28px;
 $h4-size-l: 24px;
 $h4-size-m: 20px;
 $h4-size-s: 16px;
 $h4-line-height: 1.21;
-$h4-weight: 800;
+$h4-weight: 400;
 $h4-color: $color-black;
 $h4-space: 20px;
 $h4-space-l: 20px;
 $h4-space-m: 20px;
 $h4-space-s: 20px;
 
-$h5-font: sofia-pro, sans-serif;
+$h5-font: $font-text;
 $h5-size: 24px;
 $h5-size-l: 20px;
 $h5-size-m: 16px;
@@ -120,7 +120,7 @@ $h5-space-l: 20px;
 $h5-space-m: 20px;
 $h5-space-s: 20px;
 
-$h6-font: sofia-pro, sans-serif;
+$h6-font: $font-text;
 $h6-size: 20px;
 $h6-size-l: 16px;
 $h6-size-m: 16px;
@@ -133,11 +133,11 @@ $h6-space-l: 10px;
 $h6-space-m: 10px;
 $h6-space-s: 10px;
 
-$text-font: sofia-pro, sans-serif;
-$text-size: clamp(1.1vw, 60px, 12px);
+$text-font: $font-text;
+$text-size: clamp(1vw, 60px, 12px);
 $text-size-l: clamp(1.1vw, 60px, 12px);
-$text-size-m: clamp(1.1vw, 60px, 10px);
-$text-size-s: clamp(1.1vw, 60px, 10px);
+$text-size-m: clamp(1.1vw, 60px, 12px);
+$text-size-s: clamp(1.1vw, 60px, 12px);
 $text-line-height: 1.5;
 $text-weight: 300;
 $text-weight-medium: 500;

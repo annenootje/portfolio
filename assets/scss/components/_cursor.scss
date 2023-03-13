@@ -29,10 +29,10 @@
             margin $transition;
         transform-origin: center;
 
-        margin-top: -20px;
-        margin-left: -20px;
-        width: 40px;
-        height: 40px;
+        margin-top: -15px;
+        margin-left: -15px;
+        width: 30px;
+        height: 30px;
         border: 1px solid white;
         border-radius: 100%;
 
@@ -42,7 +42,7 @@
         animation: resetCursor .35s ease-out;
 
         &::before {
-            content: 'Discover';
+            content: '';
 
             @include absolute-cover;
 
@@ -54,18 +54,20 @@
             width: fit-content;
             width: -moz-fit-content;
             
-            left: unset;
-            right: -2px;
+            // left: unset;
+            // right: -2px;
+            right: 0;
             bottom: 0;
 
             margin: auto;
             
-            background-color: $color-2;
+            // background-color: $color-2;
             transform: scale(0);
             opacity: 0;
             transition: $transition;
             
             text-align: center;
+            color: black;
             font-size: 1vw;
         }
         
@@ -86,16 +88,20 @@
         // }
     }
 
+    &.-hide {
+        transform: scale(0) !important;
+    }
+
     &.-active {
         opacity: 1;
     }
 
     &.-link {
         .cursor__inner {
-            width: 1px;
-            height: 1px;
-            margin-top: 0;
-            margin-left: 0;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            margin-left: -12px;
         }
     }
 
@@ -103,19 +109,20 @@
         .cursor__inner {
             @include flex-center;
 
-            width: 80px;
-            height: 80px;
-            margin-top: -50px;
-            margin-left: -50px;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            margin-left: -20px;
 
             // background-image: url("~/assets/img/arrow-white.svg");
             background-size: 2.3vw;
             background-position: center;
             background-repeat: no-repeat;
-
             animation: setCursor .35s ease-out;
-
+            background-color: white;
+            
             &::before {
+                // background-color: white;
                 opacity: 1;
                 transform: scale(1);
             }

@@ -2,7 +2,7 @@
     position: absolute;
     left: 34vw;
     right: 0;
-    z-index: 9;
+    z-index: 0;
 
     transform-origin: center;
 
@@ -11,12 +11,16 @@
     height: 0;
     margin-bottom: 1vw;
     padding-top: calc(62% * .30);
-    border-radius: 7%;
+    border-radius: 1.5vw;
     box-shadow:
         0 30px 80px rgba(0, 0, 0, .7),
         0 20px 120px rgba(0, 0, 0, .7);
     
     background-color: $color-dark;
+
+    @include media-s {
+        border-radius: 20px;
+    }
 
     @media (min-width: $media-s) {
         animation: loadCard 5s ease;
@@ -66,10 +70,10 @@
         right: unset;
 
         align-self: flex-end;
-        width: 70vw;
+        width: 80vw;
         margin-left: 0;
         margin-top: -3vw;
-        padding-top: calc(75% * .70);
+        padding-top: calc(90% * .70);
     }
 
     a {
@@ -77,6 +81,8 @@
         align-items: center;
 
         padding-top: 4px;
+        width: fit-content;
+        width: -moz-fit-content;
         // color: $color-1;
 
         svg {
@@ -85,7 +91,6 @@
             margin-right: 14px;
             width: 1.4vw;
             min-width: 12px;
-            margin-bottom: -.3vw;
             fill: white;
 
             * {
@@ -102,7 +107,7 @@
 
     h2 {
         & + p {
-            font-size: clamp(1vw, 60px, 12px);
+            margin-top: 5px;
         }
     }
 
@@ -148,7 +153,6 @@
         display: flex;
         justify-content: space-between;
 
-        
         padding: 3.3vw;
         
         @media (min-width: $media-s) {
@@ -156,7 +160,7 @@
         }        
 
         @include media-s {
-            padding: 7vw;
+            padding: 30px;
         }
 
         * {
@@ -218,10 +222,26 @@
         left: -100vw;
 
         display: block;
-        pointer-events: none;
+        // pointer-events: none;
 
         width: 300vw;
         height: 300vh;
+    }
+
+    &:nth-child(2) {
+        z-index: 2;
+        background-color: transparentize($color-dark, .4);
+
+        @include media-s {
+            background-color: transparentize($color-black, .1);
+        }
+    }
+    
+    &:nth-child(4) {
+        position: absolute;
+        @include media-s {
+            display: none;
+        }
     }
 }
 

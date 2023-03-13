@@ -1,7 +1,7 @@
 h1, .heading-1 {
     @include h1;
 
-    opacity:.17;
+    opacity:.08;
 
     &:nth-child(2) {
         margin-left: 6.4vw;
