@@ -2,64 +2,103 @@ footer {
   position: relative;
 
   display: flex;
-  justify-content: center;
   flex-shrink: 0;
 
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding: 120px 80px 40px;
+
+  @include media-l {
+    flex-direction: column;
+  }
+
+  @include media-m {
+    padding: 120px 15px 40px;
+  }
 
   @include media-s {
-    padding-top: 0px;
-    // padding-bottom: 40px;
+    padding-top: 80px;
   }
+
+  //  a{
+  //   border-bottom: 1px solid white;
+  //  }
 
   .container {
     display: flex;
+
+    @include media-l {
+      flex-direction: column;
+    }
   }
 
-  p {
-    position: relative;
-    z-index: 1;
+  .column {
+    width: 40%;
 
-    display: flex;
-
-    padding: 0 2vw;
-
-    // -webkit-text-stroke: .01em white;
-    // color: transparent;
-    
-    font-size: 1vw;
-    font-size: 13px;
-    // font-family: $font-heading; 
-
-    background-color: $color-2;
-
-    @include media-s {
-      font-size: 12px;
+    @include media-l {
+      margin-bottom: 60px;
+      width: 100%;
     }
 
-    * {
-      opacity: .8;
-      text-transform: uppercase;
-    }
+    img {
+      width: 30px;
+      margin-top: auto;
+      margin-bottom: 5px;
 
-    a {
-      &:hover {
-        opacity: 1;
+      @include media-l {
+        display: none;
       }
     }
-  }
 
-  .divider {
-    display: block;
-    margin: 3px 10px 0;
-
-    @include media-s {
-      margin: 2px 10px 0;
+    &.-left {
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: flex-start;
     }
-  }
 
-  .container {
-    @include container;
+    &.-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > * {
+        width: 100%;
+      }
+
+      > *:first-child {
+        width: 50%;
+        // padding-right: 40px; 
+
+        @include media-s {
+          width: 100%;
+        }
+      }
+
+      > *:nth-child(2) {
+        width: 35%;
+
+        @include media-s {
+          width: 100%;
+          margin-top: 40px;
+        }
+      }
+
+      > *:last-child {
+        margin-top: 160px;
+        opacity: .6;
+
+        @include media-m {
+          margin-top: 120px;
+        }
+      }
+    }
+
+    & + .column {
+      width: 60%;
+
+      @include media-l {
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
   }
 }

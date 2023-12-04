@@ -29,14 +29,14 @@
                       </g>
                     </svg>
                   LinkedIn</a>
-                  <a class="link" href="mailto:hallo@anne.web">
+                  <a class="link" href="mailto:anne@noot.studio">
                       <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
                         <g id="arrow-right" transform="translate(1 0.385)">
                           <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
                           <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
                         </g>
                       </svg>
-                    hallo@anne.web
+                    anne@noot.studio
                   </a>
                   <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
                 </div>
@@ -69,14 +69,14 @@
                       </g>
                     </svg>
                   LinkedIn</a>
-                  <a class="link" href="mailto:hallo@anne.web">
+                  <a class="link" href="mailto:anne@noot.studio">
                       <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
                         <g id="arrow-right" transform="translate(1 0.385)">
                           <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
                           <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
                         </g>
                       </svg>
-                    hallo@anne.web
+                    anne@noot.studio
                   </a> -->
                   <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
                 </div>
@@ -101,217 +101,152 @@
       </div>
     </section>
 
-    <section id="projects"> 
+    <section id="projects" class="section"> 
       <div class="container">
         <div class="portfolio">
           <a href="https://coquelicots.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/coquelicots-startscreen.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/coquelicots-startscreen.png" alt="Website Coquelicots">
             <span class="case__type">Website</span>
             <h2 class="case__title">Coquelicots</h2>
           </a>
+          <a href="https://herodakkapellen.nl/" target="_blank" class="portfolio__item case">
+            <img class="case__image -align-top" src="@/assets/img/hero.png" alt="Website Coquelicots">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Hero Dakkapellen</h2>
+          </a>
+          <a href="https://podcast-finder.com" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/podcastfinder-webapplication.png" alt="Webapplicatie preview PodcastFinder">
+            <span class="case__type">Webapp</span>
+            <h2 class="case__title">PodcastFinder</h2>
+          </a>
+          <a href="https://notegrafie.nl" target="_blank" class="portfolio__item case">
+            <img class="case__image -align-top" src="@/assets/img/notegrafie.png" alt="Wordpress website Notegrafie">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Notegrafie</h2>
+          </a>
           <a href="https://studiohuisvanmijn.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/huisvanmijn.png" alt="Webshop Studio Huis van Mijn preview">
+            <img class="case__image -align-top" src="@/assets/img/huisvanmijn.png" alt="Webshop Studio Huis van Mijn preview">
             <span class="case__type">Webshop</span>
             <h2 class="case__title">Studio Huis van Mijn</h2>
           </a>
           <a href="https://dnalegal.nl" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/dnalegal-website-preview.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/dnalegal-website-preview.png" alt="Website preview DNA Legal">
             <span class="case__type">Website</span>
             <h2 class="case__title">DNA Legal</h2>
           </a>
-          <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
+          <!-- <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
             <img class="case__image" src="@/assets/img/cocktailbar-website-preview.png" alt="Website Cocktailbar preview">
             <span class="case__type">Website</span>
             <h2 class="case__title">Cocktailbar Caipiroski</h2>
-          </a>
+          </a> -->
           <a href="https://leertafels.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/bram-preview.png" alt="Webapp EK Balgevoel preview">
+            <img class="case__image" src="@/assets/img/bram-preview.png" alt="Webapplicatie preview Tafels leren">
             <span class="case__type">Webapp</span>
             <h2 class="case__title">Tafels leren met Bram</h2>
           </a>
-          <a href="https://ek-balgevoel.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/ekbalgevoel-square.png" alt="Webapp EK Balgevoel preview">
+          <a href="https://scailable.net/" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/scailable.png" alt="Website">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Scailable</h2>
+          </a>
+          <a href="https://canisurftoday.com" target="_blank" class="portfolio__item case">
+            <img class="case__image" src="@/assets/img/canisurftoday.png" alt="Webapplicatie Can I surf today">
             <span class="case__type">Webapp</span>
-            <h2 class="case__title">EK balgevoel</h2>
+            <h2 class="case__title">Can I Surf Today?</h2>
           </a>
         </div>
       </div>
 
       <a class="scroll" id="scroll" href="#scroll">
         <div class="scroll__circle"></div>
-        <p class="scroll__text">Scroll down to projects</p>
+        <p class="scroll__text">Cases</p>
       </a>
     </section>
 
-    <!-- <section>
+    <section class="section --conversion">
       <div class="container">
-        <div class="slider">
-          <div
-            class="slider__inner faders"
-            @mouseenter="setCursor('SLIDE')"
-            @mouseleave="resetCursor()"
-          >
-            <div class="slider__item fader">
-              <img src="@/assets/img/cocktail-website.png" alt="Website showcase Coquelicots">
+        <div class="part-12">
+          <div class="conversion">
+            <div class="blocks">
+              <!-- <div class="block">
+                <h3>keertje sparren?</h3>
+                <a href="mailto:anne@noot.studio" class="button">Mail mij</a>
+              </div>
+              <div class="block">
+                <img src="" alt="">
+              </div> -->
             </div>
-            <div class="slider__item fader">
-              <img src="@/assets/img/huisvanmijn-phone.png" alt="Website showcase Huis van Mijn">
-            </div>-->
-            <!-- <div class="slider__item fader"> -->
-              <!-- <img src="@/assets/img/restaurant-ree.jpg" alt="Website showcase Huis van Mijn preview"> -->
-            <!-- </div> -->
-            <!-- <div class="slider__item fader"> -->
-              <!-- <img src="@/assets/img/huisvanmijn.jpg" alt="Website showcase Huis van Mijn preview"> -->
-            <!-- </div>-->
- 
-
-    <!-- <div class="naming -starter">
-      <h2>Anne Noteboom <h3>&nbsp;/ Portfolio</h3></h2>
-    </div> -->
-    <!-- <div class="naming">
-      <div class="faders">
-        <h2 class="fader">Coquelicots <h3>&nbsp;/ Website</h3></h2>
-        <h2 class="fader">Huis van Mijn <h3>&nbsp;/ Webshop</h3></h2>
-        <h2 class="fader">EK Balgevoel <h3>&nbsp;/ Webapp</h3></h2>
-        <h2 class="fader">Bram <h3>&nbsp;/ Webapp</h3></h2>
-      </div>
-    </div> -->
-
-    <!-- <div :class="['hamburger', {'-active': activeMenu}]" @click="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div> -->
-    
-    <!-- <div class="slider__container" data-tilt-max="10" data-title-scale="2">
-      <div class="slider">
-        <div
-          class="slider__inner faders"
-          @mouseenter="setCursor('SLIDE')"
-          @mouseleave="resetCursor()"
-        >
-          <div class="slider__item fader">
-            <!-- <img src="@/assets/img/cocktail-website.png" alt="Website showcase Coquelicots"> -->
-          <!-- </div>
-          <div class="slider__item fader"> -->
-            <!-- <img src="@/assets/img/huisvanmijn-phone.png" alt="Website showcase Huis van Mijn"> -->
-          <!-- </div> -->
-          <!-- <div class="slider__item fader"> -->
-            <!-- <img src="@/assets/img/restaurant-ree.jpg" alt="Website showcase Huis van Mijn preview"> -->
-          <!-- </div> -->
-          <!-- <div class="slider__item fader"> -->
-            <!-- <img src="@/assets/img/huisvanmijn.jpg" alt="Website showcase Huis van Mijn preview"> -->
-          <!-- </div>
+            <div class="splide">
+              <div class="splide__track">
+                <div class="splide__list">
+                  <div class="splide__slide">
+                    <span>websites</span>
+                    <span>blogs</span>
+                    <span>webapps</span>
+                    <span>intranets</span>
+                    <span>webshops</span>
+                    <span>dashboards</span>
+                    <span>design</span>
+                  </div>
+                  <div class="splide__slide">
+                    <span>websites</span>
+                    <span>blogs</span>
+                    <span>webapps</span>
+                    <span>intranets</span>
+                    <span>webshops</span>
+                    <span>dashboards</span>
+                    <span>design</span>
+                  </div>
+                  <div class="splide__slide">
+                    <span>websites</span>
+                    <span>blogs</span>
+                    <span>webapps</span>
+                    <span>intranets</span>
+                    <span>webshops</span>
+                    <span>dashboards</span>
+                    <span>design</span>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
         </div>
       </div>
-    </div> --> 
+    </section>
 
-    <!-- <div class="controls">
-      <div class="controls__number -start">0{{this.index + 1}}</div>
-      <div class="controls__container">
-        <div
-          class="controls__control"
-          :style="'height: ' + 100 / (max + 1) + '%; top: ' + index * 100 / (max + 1) + '%; '"
-        ></div>
+    <footer>
+      <div class="column -left">
+        <h4>Contact & info</h4>
+        <img src="@/assets/img/logo.svg" alt="">
       </div>
-      <div class="controls__number -end">0{{this.max + 1}}</div>
-    </div> -->
+      <div class="column -right">
+          <div class="about">
+            <h6>Over mij</h6>
+            <p>
+              Aangenaam, ik ben een gepassioneerde freelance web developer, oftewel professioneel nerd. Mijn doel is om unieke digitale ervaringen te creëeren door mijn kennis van techniek en design te combineren.
+              <br><br>
+              Interesse om een keer te sparren? Stuur me een mailtje!
+            </p>
+          </div>
+          <div>
+              <h6>Contact</h6>
+              <p>
+                <a class="link" href="mailto:anne@noot.studio">anne@noot.studio</a>
+              </p>
+              <h6>Social</h6>
+              <p>
+                <a class="link" href="https://www.linkedin.com/in/anne-noteboom-61b121158/?originalSubdomain=nl" target="_blank">
+                LinkedIn</a>
+              </p>
+          </div>
 
-    <!-- <div :class="['menu', {'-active': activeMenu}]">
-      <div class="menu__part">
-        <h1>
-          Een website, webapp of webshop nodig. Neem contact op voor een gesprek.
-        </h1>
-        <small>&copy;{{ new Date().getFullYear() }} Anne Noteboom</small>
+            <p>&copy; Anne Noteboom</p>
       </div>
-      <div class="menu__part">
-        <p>
-          Anne Noteboom<br/>
-          Webcreator
-        </p>
-        <p>
-          <a href="tel:0639723285">+31 6 39 72 32 85</a><br/>
-          <a href="mailto:hallo@anne.no">hallo@anne.no</a>
-        </p>
-        <p>
-          KVK 98765432<br/>
-          BTW 323456789
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/anne-noteboom-61b121158/?originalSubdomain=nl" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </div> -->
+      <!-- <p><span>&copy; Anne Noteboom</span> <span class="divider">~</span> 
+        <a class="link" href="mailto:anne@noot.studio">anne@noot.studio</a></p> -->
+    </footer>
 
     <Mouse />
-<!-- 
-    <div class="loader">
-      <h1>
-        Haven is a passionate team of game makers<br/>
-        working on breakthrough experiences. 
-      </h1>
-    </div> -->
-
-    <div class="tapes">
-      <div class="tape splide tape-1">
-        <div class="splide__track">
-          <div class="splide__list">
-            <div class="splide__slide">
-              <span>SCSS</span>
-              <span>PIZZALOVER</span>
-              <span>VUE</span>
-              <span>GRAFISCH DESIGN</span>
-              <span>REACT</span>
-              <span>PROGRAMMEREN</span>
-            </div>
-            <div class="splide__slide">
-              <span>SCSS</span>
-              <span>PIZZALOVER</span>
-              <span>VUE</span>
-              <span>GRAFISCH DESIGN</span>
-              <span>REACT</span>
-              <span>PROGRAMMEREN</span>
-            </div>
-            <div class="splide__slide">
-              <span>SCSS</span>
-              <span>PIZZALOVER</span>
-              <span>VUE</span>
-              <span>GRAFISCH DESIGN</span>
-              <span>REACT</span>
-              <span>PROGRAMMEREN</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tape splide tape-2">
-        <div class="splide__track">
-          <div class="splide__list">
-            <div class="splide__slide">
-              <span>WEBDESIGN</span>
-              <span>FREELANCER</span>
-              <span>LARAVEL</span>
-              <span>WEBSHOPS</span>
-              <span>JAVASCRIPT</span>
-              <span>WEBAPPLICATIES</span>
-              <span>HTML</span>
-            </div>
-            <div class="splide__slide">
-              <span>WEBDESIGN</span>
-              <span>FREELANCER</span>
-              <span>LARAVEL</span>
-              <span>WEBSHOPS</span>
-              <span>JAVASCRIPT</span>
-              <span>WEBAPPLICATIES</span>
-              <span>HTML</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <p><span>&copy; Anne Noteboom</span> <span class="divider">~</span> <a class="link" href="mailto:info@annenoteboom.nl">info@annenoteboom.nl</a></p>
-    </footer>
 
   </div>
 </template>
@@ -332,7 +267,6 @@
 
   export default {
     name: 'IndexPage',
-    
     components: { Logo, Mouse, Actions, Slider },
     
     data() {
@@ -365,41 +299,26 @@
 
     mounted() {
 
-      new Splide( '.tape-1', {
+      const splide = new Splide('.splide', {
         type: 'loop',
+        autoplay: true,
+        gap: 20,
         arrows: false,
         pagination: false,
-        autoplay: true,
-        autoWidth: true,
-        interval: 0,
-        pauseOnHover: false,
-        speed: 50000,
+        interval: 8000,
         easing: 'linear',
-        drag: false,
-        direction: 'rtl',
-      } ).mount();
-      
-      new Splide( '.tape-2', {
-        type: 'loop',
-        arrows: false,
-        pagination: false,
-        autoplay: true,
-        autoWidth: true,
-        interval: 0,
+        speed: 8000,
+        start: 0,
         pauseOnHover: false,
-        speed: 50000,
-        easing: 'linear',
-        drag: false,
-        direction: 'ltr',
-      } ).mount();
+
+      }).mount();
 
       const scroll = document.querySelector('.scroll');
 
       if (scroll) {
         window.addEventListener('scroll', () => {
-          console.log('hio')
           setScrollClass();  
-        })
+        });
         setScrollClass();
       }
 
@@ -414,33 +333,83 @@
       setTimeout(() => {
         this.startSlider();
       }, 5000);
-      
-      const elements = document.querySelectorAll(".card");
 
-      elements.forEach(element => {
+      var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
+      if(!isSafari) {
+
         
-        VanillaTilt.init(element, {
-          max: 10,
-          reverse: true,
-          speed: "2500",
+        const elements = document.querySelectorAll(".card");
+        
+        elements.forEach(element => {
+          
+          VanillaTilt.init(element, {
+            max: 10,
+            reverse: true,
+            speed: "2500",
+          });
         });
-      });
+        
+        window.addEventListener('mousemove', () => {
+          let card = document.querySelector('.card');
+          let card2 = document.querySelector('.card--2');
+          
+          card2.style.transform = window.getComputedStyle(card).transform;
+          
+        })
+        
+        setInterval(() => {
+          let card = document.querySelector('.card');
+          let card2 = document.querySelector('.card--2');
+          
+          card2.style.transform = window.getComputedStyle(card).transform;
+        }, 100);
 
-      window.addEventListener('mousemove', () => {
-        let card = document.querySelector('.card');
-        let card2 = document.querySelector('.card--2');
+        
+      }
+        const cases = document.querySelectorAll('.portfolio__item');
 
-        card2.style.transform = window.getComputedStyle(card).transform;
+        if (cases.length > 0) {
+          let active = -1;
+          let isHovered = false;
 
-      })
+          cases.forEach(caseItem => {
+            caseItem.addEventListener('mouseover', () => {
+              isHovered = true;
 
-      setInterval(() => {
-        let card = document.querySelector('.card');
-        let card2 = document.querySelector('.card--2');
+              cases.forEach((caseItem) => {
+                caseItem.classList.remove('-active');
+              });
+            });
+            
+            caseItem.addEventListener('mouseout', () => {
+              isHovered = false;
+            });
+          });
 
-        card2.style.transform = window.getComputedStyle(card).transform;
-      }, 100);
+          setInterval(() => {
+            if (!isHovered) {
+              active++;
 
+              if (active >= cases.length) {
+                active = 0;
+              }
+
+              cases.forEach((caseItem, index) => {
+                if (index === active) {
+                  console.log(caseItem);
+                  caseItem.classList.add('-active');
+                } else {
+                  caseItem.classList.remove('-active');
+                }
+              });
+            } else {
+              cases.forEach((caseItem) => {
+                caseItem.classList.remove('-active');
+              });
+            }
+          }, 4000);
+        }
       // const gradient = document.querySelector('.gradient');
       // let opacity = 0;
       // console.log(gradient);

@@ -1,7 +1,7 @@
 h1, .heading-1 {
     @include h1;
 
-    opacity:.08;
+    opacity:.12;
 
     &:nth-child(2) {
         margin-left: 6.4vw;
@@ -9,6 +9,10 @@ h1, .heading-1 {
     
     &:nth-child(3) {
         margin-left: 1.2vw;
+    }
+
+    @include media-s {
+        display: none
     }
 }
 
@@ -38,6 +42,10 @@ a {
 
 p {
     @include text;
+
+    & + h6 {
+        margin-top: 40px;
+    }
 }
 
 small {
@@ -54,4 +62,8 @@ small {
 
 @include text-tags {
     @include text-styles;
+}
+
+::selection {
+    background: $color-1;
 }

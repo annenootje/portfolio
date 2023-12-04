@@ -120,3 +120,50 @@
     cursor: pointer;
   }
 }
+
+.splide {
+  border-radius: 15px;
+  padding: 20px 0;
+  margin-top: 20px;
+  width: 100%;
+
+  background-color: transparentize(white, .91);
+
+  &__slide { 
+    display: flex;
+
+    & + & {
+      // margin-left: 20px;
+    }
+
+    * {
+      @include text;
+
+      margin: 0 !important;
+      color: white;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+
+        display: block;
+
+        width: 5px;
+        height: 5px;
+        margin-right: 20px;
+        border-radius: 100%;
+
+        background-color: #6161FF;
+
+      }
+
+      & + span {
+        margin-left: 20px !important;
+      }
+    }
+  }
+}

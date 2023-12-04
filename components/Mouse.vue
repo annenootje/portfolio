@@ -46,6 +46,7 @@
             })
             
             links && links.forEach(link => {
+                console.log(link);
                 link.addEventListener("mouseenter", () => {
                     cursor.classList.add("-active"),
                     cursor.classList.add("-link"),

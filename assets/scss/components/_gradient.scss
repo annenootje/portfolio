@@ -27,6 +27,10 @@
 
     animation: loadGradient 5s ease;
 
+    @include media-s {
+        opacity: .4;
+    }
+
     @keyframes loadGradient {
         0%, 30% {
             opacity: 0;

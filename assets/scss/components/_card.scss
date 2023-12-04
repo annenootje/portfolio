@@ -26,6 +26,10 @@
         animation: loadCard 5s ease;
     }
 
+    @include media-s {
+        animation: loadCardMobile 5s ease;
+    }
+
     @keyframes loadCard {
         0%, 10% {
             pointer-events: none;
@@ -48,6 +52,23 @@
         50% {
             pointer-events: auto;
             left: 34vw;
+        }
+    }
+    
+    @keyframes loadCardMobile {
+        0%, 10% {
+            pointer-events: none;
+            transform: scale(6) rotateY(-180deg);
+        }
+
+        20% {
+            transform: scale(1) rotateY(-180deg);
+        }
+        40% {
+            transform: scale(1) rotateY(0);
+        }
+        50% {
+            pointer-events: auto;
         }
     }
     
@@ -124,26 +145,50 @@
             animation: loadLogoCard 5s ease;
         }
         
+        @include media-s {
+            animation: loadLogoCardMobile 5s ease;
+        }
         
         @keyframes loadLogoCard {
-                0% {
-                    transform: scale(.5) rotateY(-180deg);
-                    opacity: 1;
-                }
-                30% {
-                    transform: scale(1) rotateY(-180deg);
-                }
-                24%, 24.9% {
-                    opacity: 1;
-
-                }
-                25% {
-                    opacity: 0;
-                }
+            0% {
+                transform: scale(.5) rotateY(-180deg);
+                opacity: 1;
             }
+            30% {
+                transform: scale(1) rotateY(-180deg);
+            }
+            24%, 24.9% {
+                opacity: 1;
+
+            }
+            25% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes loadLogoCardMobile {
+            0% {
+                transform: scale(.2) rotateY(-180deg);
+                opacity: 1;
+            }
+            30% {
+                transform: scale(.5) rotateY(-180deg);
+            }
+            24%, 24.9% {
+                opacity: 1;
+
+            }
+            25% {
+                opacity: 0;
+            }
+        }
 
         img {
             width: 2.5vw;
+
+            @include media-s {
+                width: 35px;
+            }
         }
     }
 
@@ -155,8 +200,8 @@
 
         padding: 3.3vw;
         
+        animation: loadInnerCard 5s ease;
         @media (min-width: $media-s) {
-            animation: loadInnerCard 5s ease;
         }        
 
         @include media-s {
@@ -233,7 +278,7 @@
         background-color: transparentize($color-dark, .4);
 
         @include media-s {
-            background-color: transparentize($color-black, .1);
+            background-color: #191919;
         }
     }
     

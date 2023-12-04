@@ -7,14 +7,15 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtproject',
+    title: 'Anne Noteboom | Creative webdeveloper',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Een website, webshop of webapplicatie nodig? Neem contact op' },
+      { hid: 'og:image', name: 'og:image', content: 'https://annenoteboom.nl/favicon-square.png' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -36,8 +37,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

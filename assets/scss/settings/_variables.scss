@@ -26,7 +26,7 @@ $color-3-hover: #D34C4C;
 $color-3-active: #BC4141;
 
 $color-black: #141414;
-$color-dark: rgb(14, 14, 14);
+$color-dark: rgb(18, 18, 18);
 
 
 $color-success: #16C100;
@@ -82,7 +82,7 @@ $h2-space-m: 0.4vw;
 $h2-space-s: 5px;
 
 $h3-font: $font-text;
-$h3-size: clamp(.85vw, 60px, 12px);
+$h3-size: clamp(5vw, 20px, 230px);
 $h3-size-l: clamp(.85vw, 60px, 12px);
 $h3-size-m: clamp(.85vw, 60px, 12px);
 $h3-size-s: clamp(.85vw, 60px, 12px);
@@ -97,8 +97,8 @@ $h3-space-s: 20px;
 $h4-font: $font-text;
 $h4-size: 28px;
 $h4-size-l: 24px;
-$h4-size-m: 20px;
-$h4-size-s: 16px;
+$h4-size-m: 24px;
+$h4-size-s: 24px;
 $h4-line-height: 1.21;
 $h4-weight: 400;
 $h4-color: $color-black;
@@ -128,9 +128,9 @@ $h6-size-s: 16px;
 $h6-line-height: 1.25;
 $h6-weight: 800;
 $h6-color: $color-black;
-$h6-space: 10px;
-$h6-space-l: 10px;
-$h6-space-m: 10px;
+$h6-space: 20px;
+$h6-space-l: 20px;
+$h6-space-m: 20px;
 $h6-space-s: 10px;
 
 $text-font: $font-text;

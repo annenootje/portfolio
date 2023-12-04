@@ -55,9 +55,21 @@
         width: 14vw;
         height: 8vw;
         object-fit: cover;
+
+        &.-align-top {
+            object-position: top;
+        }
+
+        @include media-s {
+            margin-top: -3vw;
+
+            width: 28vw;
+            height: 17vw;
+        }
     }
 
-    &:hover {
+    &:hover,
+    &.-active {
         .case__title {
             opacity: 0.2;
             -webkit-text-stroke: .01em white;
@@ -79,34 +91,42 @@
     }
 
     &:nth-child(1) {
-        transform: translateX(-8vw);
+        transform: translateX(-7vw);
     }
     &:nth-child(2) {
-        transform: translateX(-4vw);
+        transform: translateX(2vw);
 
         @include media-s {
             transform: translateX(1vw);
         }
     }
     &:nth-child(3) {
-        transform: translateX(-12vw);
+        transform: translateX(-5vw);
         
         @include media-s {
             transform: translateX(-4vw);
         }
     }
     &:nth-child(4) {
-        transform: translateX(4vw);
+        transform: translateX(1vw);
     }
     &:nth-child(5) {
-        transform: translateX(-10vw);
+        transform: translateX(-2vw);
         
         @include media-s {
             transform: translateX(-5vw);
         }
-
     }
     &:nth-child(6) {
-        transform: translateX(4vw);
+        transform: translateX(-4vw);
+    }
+    &:nth-child(7) {
+        transform: translateX(-4vw);
+    }
+    &:nth-child(8) {
+        transform: translateX(2vw);
+    }
+    &:nth-child(9) {
+        transform: translateX(-3vw);
     }
 }
