@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{260:function(n,e,t){"use strict";t.r(e);var o={name:"Slider",props:["index"],methods:{nextStep:function(){console.log("done")}}},l=t(42),component=Object(l.a)(o,(function(){return(0,this._self._c)("div",{staticClass:"slider"})}),[],!1,null,null,null);e.default=component.exports}}]);

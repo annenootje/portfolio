@@ -1,4 +1,10 @@
+
 <template>
+  <div>
+    hi
+  </div>
+</template>
+<!-- <template>
 
   <div class="layout">
 
@@ -38,7 +44,7 @@
                       </svg>
                     anne@noot.studio
                   </a>
-                  <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
+
                 </div>
               </div>
               <div class="card__right">
@@ -57,46 +63,15 @@
             <div class="card__inner" data-tilt>
               <div class="card__left">
                 <div>
-                  <!-- <h2>Anne Noteboom</h2>
-                  <p>Welkom op mijn portfolio</p> -->
-                </div>
-                <div>
-                  <!-- <a class="link" href="https://www.linkedin.com/in/anne-noteboom-61b121158/?originalSubdomain=nl" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
-                      <g id="arrow-right" transform="translate(1 0.385)">
-                        <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
-                        <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
-                      </g>
-                    </svg>
-                  LinkedIn</a>
-                  <a class="link" href="mailto:anne@noot.studio">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="42.745" height="20.189" viewBox="0 0 42.745 20.189">
-                        <g id="arrow-right" transform="translate(1 0.385)">
-                          <path id="Path_158" data-name="Path 158" d="M32.685,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H32.685a1,1,0,0,1,1,1A1,1,0,0,1,32.685,1Z" transform="translate(0 10.089)"/>
-                          <path id="Union_3" data-name="Union 3" d="M3856.35-21792.611a1.011,1.011,0,0,1-.684-.34,1.018,1.018,0,0,1-.252-.729,1.049,1.049,0,0,1,.339-.689l9.511-8.332-9.511-8.344-.044-.043a1,1,0,0,1-.049-1.369,1.012,1.012,0,0,1,.69-.34,1,1,0,0,1,.723.248l10.073,8.834a.993.993,0,0,1,.319.953,1,1,0,0,1-.27,1.023l-.049.049-10.067,8.83a1,1,0,0,1-.664.25Z" transform="translate(-3825.763 21812.414)"/>
-                        </g>
-                      </svg>
-                    anne@noot.studio
-                  </a> -->
-                  <!-- <a href="mailto:31639723285">+31 6 39 72 32 85</a> -->
+                  <h2>Anne Noteboom</h2>
+                  <p>Welkom op mijn portfolio</p>
                 </div>
               </div>
-              <!-- <div class="card__right">
-                <div class="card__image">
-                  <img src="@/assets/img/logo.svg" />
-                  <img src="@/assets/img/hello.svg" />
-                </div>
-              </div> -->
             </div>
             <div class="card__overlay">
               <img src="@/assets/img/logo.svg" />
             </div>
           </div>
-
-          <!-- <div class="more" href="projects">
-            PROJECTEN
-          </div> -->
-
         </div>
       </div>
     </section>
@@ -139,11 +114,6 @@
             <span class="case__type">Website</span>
             <h2 class="case__title">DNA Legal</h2>
           </a>
-          <!-- <a href="https://www.cocktailbar-caipiroska.nl/" target="_blank" class="portfolio__item case">
-            <img class="case__image" src="@/assets/img/cocktailbar-website-preview.png" alt="Website Cocktailbar preview">
-            <span class="case__type">Website</span>
-            <h2 class="case__title">Cocktailbar Caipiroski</h2>
-          </a> -->
           <a href="https://leertafels.nl/" target="_blank" class="portfolio__item case">
             <img class="case__image" src="@/assets/img/bram-preview.png" alt="Webapplicatie preview Tafels leren">
             <span class="case__type">Webapp</span>
@@ -173,13 +143,6 @@
         <div class="part-12">
           <div class="conversion">
             <div class="blocks">
-              <!-- <div class="block">
-                <h3>keertje sparren?</h3>
-                <a href="mailto:anne@noot.studio" class="button">Mail mij</a>
-              </div>
-              <div class="block">
-                <img src="" alt="">
-              </div> -->
             </div>
             <div class="splide">
               <div class="splide__track">
@@ -247,8 +210,8 @@
 
             <p>&copy; Anne Noteboom</p>
       </div>
-      <!-- <p><span>&copy; Anne Noteboom</span> <span class="divider">~</span> 
-        <a class="link" href="mailto:anne@noot.studio">anne@noot.studio</a></p> -->
+      <p><span>&copy; Anne Noteboom</span> <span class="divider">~</span> 
+        <a class="link" href="mailto:anne@noot.studio">anne@noot.studio</a></p>
     </footer>
 
     <Mouse />
@@ -265,8 +228,6 @@
   import VueParallaxJs from 'vue-parallax-js'
   import Vue from 'vue';
   import Splide from '@splidejs/splide';
-
-  // import '@splidejs/splide/css';
 
   Vue.use(VueParallaxJs);
 
@@ -415,29 +376,6 @@
             }
           }, 4000);
         }
-      // const gradient = document.querySelector('.gradient');
-      // let opacity = 0;
-      // console.log(gradient);
-
-      // function setGradientOpacity() {
-      //   opacity = .2 - window.scrollY / 500;
-
-      //   console.log(opacity);
-        
-      //   if (opacity < 0) {
-      //     gradient.style.opacity = 0;
-      //   } else {
-      //     gradient.style.opacity = opacity;
-      //   }
-      // }
-
-      // setGradientOpacity();
-
-      // window.addEventListener('scroll', () => {
-      //   console.log('hio')
-      //   setGradientOpacity();
-      // });
-
     },
 
     methods: {
@@ -507,4 +445,4 @@
 
     }
   }
-</script>
+</script> -->

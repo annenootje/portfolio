@@ -1,15 +1,5 @@
-@charset "UTF-8";
-@import url("https://use.typekit.net/lgw5dfv.css");
-
-@font-face {
-    font-family: "Ginger";
-    src: url('~/assets/fonts/ginger.otf');
-}
-
-@font-face {
-    font-family: "Eastman";
-    src: url('~/assets/fonts/eastmand.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://use.typekit.net/upy7ukk.css");
 
 @import 'settings/variables';
 @import 'settings/mixins';
@@ -31,15 +21,10 @@
 @import 'components/hamburger';
 @import 'components/action';
 @import 'components/link';
-@import 'components/loader';
-@import 'components/naming';
-@import 'components/controls';
+@import 'components/loader'; 
 @import 'components/menu';
 @import 'components/card';
-@import 'components/tape';
 @import 'components/intro';
 @import 'components/gradient';
 @import 'components/scroll';
 @import 'components/case';
-@import 'components/portfolio';
-  

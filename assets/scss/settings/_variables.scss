@@ -52,21 +52,21 @@ $grid-model-xs: 4;
 $grid-gutter-xs: 3.2%;
 
 // Typography
-$font-heading: "Eastman";
-$font-text: "Eastman";
+$font-heading: "Larken";
+$font-text: "DM Sans";
 
 $h1-font: $font-heading;
-$h1-size: clamp(11.5vw, 20px, 230px);
+$h1-size: 4.16vw;
 $h1-size-l: clamp(11.5vw, 20px, 230px);
 $h1-size-m: clamp(11.5vw, 20px, 230px);
 $h1-size-s: clamp(16vw, 20px, 230px);
-$h1-line-height: 1.23;
+$h1-line-height: 1.15;
 $h1-weight: 400;
 $h1-color: white;
-$h1-space: -3.7vw;
-$h1-space-l: -3.5vw;
-$h1-space-m: -3.5vw;
-$h1-space-s: -5.5vw;
+$h1-space: 0;
+$h1-space-l: 0;
+$h1-space-m: 0;
+$h1-space-s: 0;
 
 $h2-font: $font-heading;
 $h2-size: clamp(1.8vw, 60px, 16px);
