@@ -124,6 +124,11 @@
             <span class="case__type">Website</span>
             <h2 class="case__title">Notegrafie</h2>
           </a>
+          <a href="https://toursdedrone.com" target="_blank" class="portfolio__item case">
+            <img class="case__image -align-top" src="@/assets/img/toursdedrone.png" alt="Website homepagina">
+            <span class="case__type">Website</span>
+            <h2 class="case__title">Tours de Drone</h2>
+          </a>
           <a href="https://studiohuisvanmijn.nl" target="_blank" class="portfolio__item case">
             <img class="case__image -align-top" src="@/assets/img/huisvanmijn.png" alt="Webshop Studio Huis van Mijn preview">
             <span class="case__type">Webshop</span>
