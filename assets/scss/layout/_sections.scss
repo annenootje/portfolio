@@ -1,94 +1,52 @@
 .section {
-    & + .--conversion {
+    
+    .container {
+        @include space-col;
+        @include grid;
+        @include container;
+
+        .container {
+            @include container('full-width');
+        }
+    }
+
+    & + .section:not(.--colored) {
         @include space-standard(margin-top);
+    }
+    
+    &.--extra-small {
+        @include container('extra-small');
+    }
 
-        .blocks {
-            display: flex;
-            justify-content: space-between;
+    &.--full-width {
+        @include container('full-width');
+    }
 
-            width: 100%;
-        }
+    &.--colored {
+        @include line-colored($color-1);
+        @include background-colors;
+    }
 
-        .block {
-            border-radius: 40px;
+    &.--portfolio {
+        overflow: hidden;
+    }
 
-            background-color: transparentize(white, .9);
-            text-align: left;
+    &.--about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-            &:nth-child(1) {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
+        min-height: calc(100vh - #{$space-side * 2});
 
-                padding: 40px;
-                width: calc(40% - 20px);
-            }
-
-            &:nth-child(2) {
-                position: relative;
-
-                width: 60%;
-                height: 0;
-                padding-top: calc(60% * .6);
-
-                img {
-                    @include absolute-cover;
-                }
+        .container {
+            & + .container {
+                @include space-small(margin-top);
             }
         }
+    }
 
-        .conversion {
-            position: relative;
-            overflow: hidden;
-
-            display: flex;
-            // flex-direction: column;
-            align-items: center;
-            flex-wrap: wrap;
-
-            max-width: calc(100% - 50px);
-            margin: auto;
-
-            // background-color: $color-1;
-
-            @include media-m {
-                border-radius: 20px;
-                max-width: calc(100% - 20px);
-            }
-
-            @include media-s {
-                // padding-top: 40%;
-                margin-top: 70px;
-            }
-
-            // img {
-            //     @include absolute-cover;
-
-            //     object-fit: cover;
-            // }
-
-            h3 {
-                font-style: italic;
-                line-height: 1;
-
-                & + h3 {
-                    margin-top: 0;
-                    margin-left: 60px;
-                }
-            }
-
-
-
-            .button {
-                margin-top: 140px;
-                font-weight: 600;
-
-            }
-            // * {
-            //     text-align: center;
-            // }
-        }
-
+    &.--contact {
+        margin-top: 0 !important;
     }
 }
+

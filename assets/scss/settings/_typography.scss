@@ -29,6 +29,8 @@ a {
 p {
     @include text;
 
+    opacity: .8;
+
     & + h6 {
         margin-top: 40px;
     }
@@ -40,6 +42,11 @@ small {
 
 .quote {
     @include quote;
+
+    &.-small {
+        font-size: 4vw;
+        font-weight: 300;
+    }
 }
 
 @include heading-tags {
@@ -51,5 +58,6 @@ small {
 }
 
 ::selection {
-    background: $color-1;
+    background: $color-1-active;
+    color: $color-dark;
 }

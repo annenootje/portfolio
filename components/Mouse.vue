@@ -10,8 +10,10 @@
 
         mounted() {
             const cursor = document.querySelector(".cursor"),
-                cases = document.querySelectorAll(".case"),
-                links = document.querySelectorAll(".link"),
+                cases = document.querySelectorAll(".item"),
+                links = document.querySelectorAll(".card"),
+                textlinks = document.querySelectorAll(".link"),
+                mouseenlargers = document.querySelectorAll(".-enlarge-mouse"),
                 canvas = document.querySelector(".cursor__wrapper"),
                 cursor_inner = document.querySelector(".cursor__inner");
             
@@ -46,30 +48,38 @@
             })
             
             links && links.forEach(link => {
-                console.log(link);
                 link.addEventListener("mouseenter", () => {
                     cursor.classList.add("-active"),
-                    cursor.classList.add("-link"),
-                    
-                    setTimeout(() => {
-                        // cursor_inner.style.width = link.offsetWidth + 'px';
-                        // cursor_inner.style.height = '1px';
-                        // cursor_inner.style.border = 'none';
-                        cursor_inner.style.backgroundColor = 'white';
-                        
-                        // cursor.style.transform = "translate3d(" + link.getBoundingClientRect().left + 'px' + "," + link.getBoundingClientRect().bottom + "px, 0px) !important";
-                        // console.log(link.getBoundingClientRect().left);
-                    }, 0);
+                    cursor.classList.add("-link")
                 }),
 
                 link.addEventListener("mouseleave", () => {
                     cursor.classList.remove("-active"),
                     cursor.classList.remove("-link");
+                })
+            })
+            
+            textlinks && textlinks.forEach(link => {
+                link.addEventListener("mouseenter", () => {
+                    cursor.classList.add("-active"),
+                    cursor.classList.add("-link")
+                }),
 
-                    // cursor_inner.style.width = '40px';
-                    // cursor_inner.style.height = '40px';
-                    // cursor_inner.style.border = '1px solid white';
-                    cursor_inner.style.backgroundColor = 'transparent';
+                link.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("-active"),
+                    cursor.classList.remove("-link");
+                })
+            })
+            
+            mouseenlargers && mouseenlargers.forEach(link => {
+                link.addEventListener("mouseenter", () => {
+                    cursor.classList.add("-active"),
+                    cursor.classList.add("-link")
+                }),
+
+                link.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("-active"),
+                    cursor.classList.remove("-link");
                 })
             })
         }

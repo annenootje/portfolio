@@ -1,194 +1,37 @@
 .card {
-    position: absolute;
-    left: 34vw;
-    right: 0;
+    @include absolute-center;
+
     z-index: 0;
 
+    transition: $transition;
     transform-origin: center;
+    transform: matrix(0.9, -0.3, 0.4, 1, 0, 0);
+        -ms-transform: matrix(0.9, -0.3, 0.4, 1, 0, 0);
+        -webkit-transform: matrix(0.9, -0.3, 0.4, 1, 0, 0);
 
     margin: auto;
-    width: 30vw;
+    width: 24vw;
     height: 0;
-    margin-bottom: 1vw;
-    padding-top: calc(62% * .30);
-    border-radius: 1.5vw;
+
+    padding-top: 15vw;
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, .7),
-        0 20px 120px rgba(0, 0, 0, .7);
+        -20px -10px 80px rgba(0, 0, 0, .7),
+        -20px -10px 120px rgba(0, 0, 0, .7);
     
     background-color: $color-dark;
 
-    @include media-s {
-        border-radius: 20px;
-    }
+    // a {
+    //     display: flex;
+    //     align-items: center;
 
-    @media (min-width: $media-s) {
-        animation: loadCard 5s ease;
-    }
+    //     padding-top: 4px;
+    //     width: fit-content;
+    //     width: -moz-fit-content;
+    // }
 
-    @include media-s {
-        animation: loadCardMobile 5s ease;
-    }
-
-    @keyframes loadCard {
-        0%, 10% {
-            pointer-events: none;
-            left: 0;
-            transform: scale(3.5) rotateY(-180deg);
-
-            // background-color: $color-2;
-        }
-
-        20% {
-            left: 0;
-            transform: scale(1) rotateY(-180deg);
-        }
-        30% {
-            left: 0;
-        }
-        40% {
-            transform: scale(1) rotateY(0);
-        }
-        50% {
-            pointer-events: auto;
-            left: 34vw;
-        }
-    }
-    
-    @keyframes loadCardMobile {
-        0%, 10% {
-            pointer-events: none;
-            transform: scale(6) rotateY(-180deg);
-        }
-
-        20% {
-            transform: scale(1) rotateY(-180deg);
-        }
-        40% {
-            transform: scale(1) rotateY(0);
-        }
-        50% {
-            pointer-events: auto;
-        }
-    }
-    
-    @keyframes loadInnerCard {
-        0% {
-            opacity: 0;
-        }
-        25%, 25.9% {
-            opacity: 0;
-
-        }
-        30% {
-            opacity: 1;
-        }
-    }
-
-    @include media-s {
-        position: relative;
-        left: unset;
-        right: unset;
-
-        align-self: flex-end;
-        width: 80vw;
-        margin-left: 0;
-        margin-top: -3vw;
-        padding-top: calc(90% * .70);
-    }
-
-    a {
-        display: flex;
-        align-items: center;
-
-        padding-top: 4px;
-        width: fit-content;
-        width: -moz-fit-content;
-        // color: $color-1;
-
-        svg {
-            transition: transform $transition;
-
-            margin-right: 14px;
-            width: 1.4vw;
-            min-width: 12px;
-            fill: white;
-
-            * {
-                fill: white;
-            }
-        }
-
-        &:hover {
-            svg {
-                transform: translateX(5px);
-            }
-        }
-    }
-
-    h2 {
+    h3 {
         & + p {
-            margin-top: 5px;
-        }
-    }
-
-    &__overlay {
-        @include absolute-cover;
-        @include flex-center;
-
-        transform: rotateY(-180deg);
-        pointer-events: none;
-
-        opacity: 0;
-
-        @media (min-width: $media-s) {
-            animation: loadLogoCard 5s ease;
-        }
-        
-        @include media-s {
-            animation: loadLogoCardMobile 5s ease;
-        }
-        
-        @keyframes loadLogoCard {
-            0% {
-                transform: scale(.5) rotateY(-180deg);
-                opacity: 1;
-            }
-            30% {
-                transform: scale(1) rotateY(-180deg);
-            }
-            24%, 24.9% {
-                opacity: 1;
-
-            }
-            25% {
-                opacity: 0;
-            }
-        }
-        
-        @keyframes loadLogoCardMobile {
-            0% {
-                transform: scale(.2) rotateY(-180deg);
-                opacity: 1;
-            }
-            30% {
-                transform: scale(.5) rotateY(-180deg);
-            }
-            24%, 24.9% {
-                opacity: 1;
-
-            }
-            25% {
-                opacity: 0;
-            }
-        }
-
-        img {
-            width: 2.5vw;
-
-            @include media-s {
-                width: 35px;
-            }
+            margin-top: 10px;
         }
     }
 
@@ -198,12 +41,8 @@
         display: flex;
         justify-content: space-between;
 
-        padding: 3.3vw;
+        padding: 2.6vw;
         
-        animation: loadInnerCard 5s ease;
-        @media (min-width: $media-s) {
-        }        
-
         @include media-s {
             padding: 30px;
         }
@@ -212,10 +51,29 @@
             color: white;
         }
 
+        img {
+            transition: 
+                opacity $transition,
+                transform $transition;
+            width: 1.45vw;
+            
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 3vw;
+
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            @include media-s {
+                width: 35px;
+            }
+        }
+
         &:hover {
             img {
                 &:nth-of-type(1) {
-                    transform: translateY(-25px);
+                    transform: translateY(-1vw);
                     opacity: 0;
                 }
                 &:nth-of-type(2) {
@@ -223,7 +81,15 @@
                     transform: translateY(-5px);
                 }
             }
+
+            svg {
+                animation: linkhover 1s;
+            }
         }
+    }
+
+    &__title {
+        font-size: 1.7vw;
     }
 
     &__left {
@@ -232,60 +98,25 @@
         flex-direction: column;
     }
 
+    &__icon {
+        width: .6vw;
+        margin-bottom: -.1vw;
+        margin-right: .5vw;
+        height: auto;
+    }
+
     &__right {
+        display: flex;
+        flex-direction: column;
     }
-    
-    &__image {
-        position: relative;
 
-        width: 2.1vw;
-        min-width: 18px;
+    &:hover {
+        transform: scale(1.1);
 
-        @include media-s {
-            margin-top: 2px;
-        }
-
-        img {
-            transition: 
-                opacity $transition,
-                transform $transition;
-            position: absolute;
-            width: 100%;
-
-            &:nth-of-type(2) {
-                opacity: 0;
-                transform: translateY(25px);
+        .card__icon {
+            * {
+                stroke: $color-1-hover;
             }
-        }
-    }
-
-    &::before {
-        content: '';
-
-        position: fixed;
-        top: -100vh;
-        left: -100vw;
-
-        display: block;
-        // pointer-events: none;
-
-        width: 300vw;
-        height: 300vh;
-    }
-
-    &:nth-child(2) {
-        z-index: 2;
-        background-color: transparentize($color-dark, .4);
-
-        @include media-s {
-            background-color: #191919;
-        }
-    }
-    
-    &:nth-child(4) {
-        position: absolute;
-        @include media-s {
-            display: none;
         }
     }
 }

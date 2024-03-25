@@ -1,47 +1,38 @@
-// .link {
-//     display: block;
+.link {
+    display: flex;
+    align-items: center;
 
-//     transition:
-//         background-size $transition,
-//         background-position $transition,
-//         color $transition;
     
-//     padding-bottom: 10px;
-    
-//     background-image: linear-gradient($color-1, $color-1);
-//     background-position: 100% 100%;
-//     background-repeat: no-repeat;
-//     background-size: 100% 2px;
-    
-//     @include h2;
 
-//     text-transform: uppercase;
-//     color: $color-2;
-    
-//     @keyframes backgroundPosition {
-//         0%, 99%, 100% {
-//             background-position: 0 100%;
-//         }
-//         100% {
-//             background-position: 100% 100%;
-//         }
-//     }
-    
-//     &:hover {
-//         background-size: 0 0;
-//         background-position: 100% 100%;
-        
-//         animation: backgroundPosition 450ms;
+    img, svg {
+        width: .6vw;
+        margin-bottom: -.1vw;
+        margin-right: 1vw;
+        height: auto;
 
-//         // color: $color-1;
-//     }
+        path {
+            transition: fill .3s, stroke .3s;
+        }
 
-//     &.-uppercase {
-//         text-transform: uppercase;
-//     }
+    }
 
-//     & + & {
-//         margin-top: 0;
-//         margin-left: 1.5vw;
-//     }
-// }
+    &:hover {
+        svg, img {
+            animation: linkhover 1s;
+
+            path {
+                stroke: $color-1-active;
+            }
+        }
+    }
+
+    &.-right-icon {
+        font-weight: 500;
+
+        img, svg {
+            margin-left: 1vw;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+}

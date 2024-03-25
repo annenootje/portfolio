@@ -2,103 +2,12 @@ footer {
   position: relative;
 
   display: flex;
+  justify-content: center;
   flex-shrink: 0;
 
-  padding: 120px 80px 40px;
+  padding: 0 0 3vw;
 
-  @include media-l {
-    flex-direction: column;
-  }
-
-  @include media-m {
-    padding: 120px 15px 40px;
-  }
-
-  @include media-s {
-    padding-top: 80px;
-  }
-
-  //  a{
-  //   border-bottom: 1px solid white;
-  //  }
-
-  .container {
-    display: flex;
-
-    @include media-l {
-      flex-direction: column;
-    }
-  }
-
-  .column {
-    width: 40%;
-
-    @include media-l {
-      margin-bottom: 60px;
-      width: 100%;
-    }
-
-    img {
-      width: 30px;
-      margin-top: auto;
-      margin-bottom: 5px;
-
-      @include media-l {
-        display: none;
-      }
-    }
-
-    &.-left {
-      display: flex;
-      flex-direction: column;
-      align-items: space-between;
-      justify-content: flex-start;
-    }
-
-    &.-right {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      > * {
-        width: 100%;
-      }
-
-      > *:first-child {
-        width: 50%;
-        // padding-right: 40px; 
-
-        @include media-s {
-          width: 100%;
-        }
-      }
-
-      > *:nth-child(2) {
-        width: 35%;
-
-        @include media-s {
-          width: 100%;
-          margin-top: 40px;
-        }
-      }
-
-      > *:last-child {
-        margin-top: 160px;
-        opacity: .6;
-
-        @include media-m {
-          margin-top: 120px;
-        }
-      }
-    }
-
-    & + .column {
-      width: 60%;
-
-      @include media-l {
-        width: 100%;
-        margin-bottom: 0;
-      }
-    }
+  * {
+    text-align: center;
   }
 }

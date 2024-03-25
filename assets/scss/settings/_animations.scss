@@ -74,3 +74,26 @@
         height: 0;
     }
 }
+
+@keyframes linkhover {
+    0% {
+        transform: translate(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translate(.6vw, -.6vw);
+    }
+    51% {
+        transform: translate(-.3vw, .3vw);
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0);
+    }
+}

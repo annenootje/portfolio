@@ -1,4 +1,6 @@
 .intro {
+    position: relative;
+
     width: 100%;
     height: 100vh;
 
@@ -8,6 +10,26 @@
 
     * {
         text-align: center;
+    }
+
+    &__gradient {
+        position: absolute;
+
+        right: 28vw;
+        top: 8vw;
+
+        width: 64vw;
+    }
+
+    &__balloon {
+        @include absolute-center;
+
+        opacity: .4;
+        width: 24vw;
+    }
+
+    & + .section {
+        margin-top: 0 !important;
     }
     
 }

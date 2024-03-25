@@ -1,0 +1,19 @@
+.contact {
+    @include flex-center;
+    @include background-cover('@/assets/img/gradient.png');
+
+    position: relative;
+
+    min-height: calc(100vh - 3vw - 15px);
+    width: 100%;
+
+    @include space-standard(padding-top);
+    @include space-standard(padding-bottom);
+
+    &__title {
+        opacity: .8;
+
+        font-size: 15vw;
+        font-family: $font-heading;
+    }
+}

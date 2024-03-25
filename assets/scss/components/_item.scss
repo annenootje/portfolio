@@ -1,0 +1,59 @@
+.item {
+    position: relative;
+    display: flex;
+
+    transition: $transition;
+  
+    &::before {
+        content: '';
+        
+        display: block;
+        padding-top: 100%;
+    }
+
+    &::after {
+        content: '';
+
+        z-index: -1;
+        opacity: .9;
+
+        @include absolute-cover;
+        @include background-cover("@/assets/img/case-gradient.svg");
+    }
+
+    &__inner {
+        @include absolute-cover;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 2.6vw;
+
+        * {
+            text-align: left;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        margin-top: 0;
+    }
+
+    &__bottom {
+        margin-top: 0;
+        opacity: 1;
+
+        font-size: 0.65vw;
+        font-weight: 500;
+        letter-spacing: .01rem;
+    }
+
+    &.-is-hovering:not(:hover) {
+        opacity: .3;
+    }
+}
